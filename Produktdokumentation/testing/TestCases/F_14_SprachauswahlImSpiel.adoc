@@ -1,0 +1,14 @@
+TC F.14: Sprachauswahl im Spiel
+
+*Beschreibung:* Dieser Testfall prüft, ob der Spieler die Spielsprache aus mehreren verfügbaren Optionen auswählen kann.
+
+*Annahmen und Voraussetzungen:* Das Spiel ist gestartet und befindet sich im Hauptmenü.
+
+*Testdaten:* Verfügbare Sprachoptionen (z.B. Deutsch, Englisch, Französisch).
+
+*Auszuführende Schritte:*
+
+. Navigation zum Sprachmenu.
+. Auswahl einer Sprache aus den verfügbaren Optionen.
+
+*Erwartetes Ergebnis:* Das gesamte Spiel, einschliesslich Menüs und Anweisungen, wird in der ausgewählten Sprache angezeigt und kehrt automatisch ins Hauptmenü zurück.

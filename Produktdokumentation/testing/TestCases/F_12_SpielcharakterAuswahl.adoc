@@ -1,0 +1,13 @@
+TC F.12: Spielcharakter Auswahl
+
+*Beschreibung:* Dieser Testfall überprüft, ob der Spieler vor dem Spielbeginn zwischen zwei verfügbaren Spielcharakteren wählen kann.
+
+*Annahmen und Voraussetzungen:* Das Spiel ist geladen und der Spieler befindet sich im Auswahlmenü für Spielcharaktere.
+
+*Testdaten:* Verfügbare Charaktere (z.B. Charakter Male und Charakter Female).
+
+*Auszuführende Schritte:*
+
+. Wähle einen der verfügbaren Charaktere aus.
+
+*Erwartetes Ergebnis:* Der ausgewählte Charakter wird für das Spiel übernommen und im Spiel (nach dem Tutorial) verwendet.

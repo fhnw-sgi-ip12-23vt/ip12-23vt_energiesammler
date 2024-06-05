@@ -1,0 +1,15 @@
+TC: W.2: Themeninhalt finden
+
+*Testbeschreibung:* Überprüfung der Auffindbarkeit von Themeninhalten in der Dokumentation.
+
+*Annahmen und Voraussetzungen:* Alle Themeninhalte des Template befinden sich in der Dokumentation. Die Dokumentation besitzt ein Inhaltsverzeichnis zur Übersicht.
+
+*Testdaten:* Messung der Zeit bis bestimmte Themeninhalte in der Dokumentation gefunden wurde.
+
+*Auszuführende Schritte:*
+
+. Bereitstellen des SAD Liste von verschiedenen Themen.
+. Testperson bestimmtes Thema geben und Zeit messen bis richtige Stelle in der Dokumentation gefunden wurde.
+. Dokumentieren wie viel Zeit benötigt wurde um ein bestimmtes Thema zu finden.
+
+*Erwartetes Ergebnis:* Die Testperson kann alle Themeninhalte innerhalb von jeweils einer Minute finden.

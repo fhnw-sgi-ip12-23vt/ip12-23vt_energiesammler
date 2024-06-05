@@ -1,0 +1,105 @@
+[[section-building-block-view]]
+== Bausteinsicht
+
+image::05_building_blocks-DE.png["Hierarchie in der Bausteinsicht"]
+
+=== Whitebox Gesamtsystem
+
+image:Ebene-0.png[Ebene 0. EnergieSammler]
+
+Begründung::
+Das Gesamtsystem basiert auf einem Raspberry Pi, welcher als Hardware-Plattform dient. Die Benutzerinteraktion wird durch PI4J verarbeitet und an das Subsystem EnergieSammler weitergeleitet. Processing.core.PApplet wird für die grafische Darstellung und Spiellogik verwendet. Dateieingaben werden direkt im EnergieSammler-Subsystem verarbeitet, welches auch die Spielausgabe steuert.
+
+Enthaltene Bausteine::
+|===
+|Subsystem |Kurzbeschreibung
+
+|EnergieSammler
+|Zentrales Subsystem für das Spiel. Verwaltet Spiellogik, Gegner, Energiequellen, Aufgaben und Spielerinteraktionen.
+
+|===
+
+Wichtige Schnittstellen::
+- *Spieler-Eingabe:* Schnittstelle für den Spieler zum spielen des Spiels über Joystick und Buttons.
+- *Primeo-Eingabe:* Schnittstelle für Primeo Arbeiter für die Verarbeitung von Konfigurationsdateien.
+
+==== EnergieSammler
+Zweck/Verantwortung: ::
+Das EnergieSammler-Subsystem ist das Herzstück des Spiels und verantwortlich für die Koordination der Spiellogik, Verwaltung von Gegnern, Energiequellen und Aufgaben, sowie die Verarbeitung von Spielerentscheidungen und -aktionen.
+
+Schnittstellen: ::
+- *Datei-Eingabe:* Verantwortlich für die Verarbeitung von Sprachdateien (.properties), um Mehrsprachigkeit im Spiel zu ermöglichen. Diese Schnittstelle ermöglicht das Laden und Anwenden verschiedener Spracheinstellungen basierend auf Benutzerpräferenzen.
+- *Spiel-Ausgabe:* Diese Schnittstelle stellt das Hauptprogramm des Spiels dar und ist für die Ausgabe des Spiels zuständig, einschliesslich der Darstellung des Spielgeschehens und der Benutzeroberfläche.
+
+=== Ebene 1
+
+image:Ebene-1.png[Ebene 1. EnergieSammler]
+
+Enthaltene Bausteine::
+|===
+|Modul |Kurzbeschreibung
+
+|Controls
+|Verwaltet Benutzereingaben und leitet diese an GameLogic weiter.
+
+|GameLogic
+|Kernmodul für die Spiellogik, Verwaltung von Leveln, Plattformen und Spielzuständen.
+
+|Entities
+|Beinhaltet Klassen für Spieler, Gegner, Energiequellen und Türen.
+
+|Ui
+|Verwaltet die Benutzeroberfläche, Menüs und Bilanz.
+
+|Utils
+|Stellt Klassen zur wiederverwendung im Rest des Codes zur verfügung.
+
+|===
+
+==== Whitebox Controls
+Dieses Modul fungiert als Schnittstelle zwischen dem PI4J-Subsystem und der GameLogic. Es interpretiert Benutzereingaben (Tastendrücke, Joystick-Bewegungen) und konvertiert diese in spielrelevante Aktionen.
+
+==== Whitebox GameLogic
+Das Herzstück des Spiels, das für die Ablaufsteuerung, die Levellogik, die Verwaltung von Spielerfortschritt und die Interaktion mit Spielobjekten (wie Energieressourcen und Gegnern) verantwortlich ist. Dieses Modul nutzt die grafischen Fähigkeiten von Processing.core.PApplet, um das Spiel visuell darzustellen.
+
+==== Whitebox Entities
+Dieses Modul beherbergt die Klassen und Objekte, die die Spielwelt bevölkern, einschliesslich
+
+der Spielfigur, Gegner und interaktiver Objekte. Es ist verantwortlich für die Verwaltung von Zuständen, Animationen und Interaktionen dieser Entitäten.
+
+==== Whitebox Ui
+Verwaltet die Benutzerschnittstelle des Spiels, einschliesslich Menüs, Overlay-Anzeigen während des Spiels und auch die Bilanz. Dieses Modul stellt sicher, dass der Spieler stets über seinen aktuellen Status und verfügbare Optionen informiert ist.
+
+==== Whitebox Utils
+Stellt Klassen bereit zum verwenden von Bildern, Sprachdateien und Frames per Second.
+
+=== Ebene 2
+
+image:Ebene-2.png[Ebene 2. EnergieSammler]
+
+==== Whitebox Platformer
+Steuert die einzelnen Teile des Spiels an und stellt standart Variablen zur Verfügung.
+
+==== Whitebox GameLogic
+Führt die Logik des Spiels aus wie das Scrollen des Bildschirms, Interaktionen mit der Spielwelt und Kollisionen der Entitäten.
+
+==== Whitebox Sprite
+Klasse für anzeigen und Logik von einfachen Entitäten wie Blöcke oder Batterien.
+
+==== Whitebox Animated Sprite
+Klasse für anzeigen und Logik von animierten Entiäten wie Spieler und Gegner sowie ausführen der Animationen.
+
+==== Whitebox InputManager
+Managed die Eingabe durch den Spieler und wertet sie aus für weiterverwendung.
+
+==== Whitebox Displayer
+Stellt die einzelnen Elemente des Spiels auf dem Bildschirm dar.
+
+=== Ebene 3
+
+image:Ebene-3.png[Ebene 3. EnergieSammler]
+
+TODO: Ausführliche Beschreibung von wichtigen Methoden wie in den vorherigen Ebenen mit jeweils Klassendiagramm der einzelnen beschreibende Klasse
+
+==== Whitebox GameStateBase
+Dient als Vorlage für die Zustände des Spiels für das bereitmachen der Anzeige, das Zeichnen der Elemente und das Auswerten der Eingaben.

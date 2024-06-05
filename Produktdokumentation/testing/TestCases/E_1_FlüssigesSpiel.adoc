@@ -1,0 +1,15 @@
+TC: E.1: Flüssiges Spiel
+
+*Testbeschreibung:* Prüfung der Bildwiederholrate (FPS) unter normalen Spielbedingungen.
+
+*Annahmen und Voraussetzungen:* Das Spiel ist auf einem Raspberry Pi 4 8GB Modell installiert. Die Auflösung ist auf 720x480 1920x1080 eingestellt. Die Methode fpsAverage.update() wird im Spiel Code ausgeführt.
+
+*Testdaten:* Messung der durchschnittlichen FPS während eines typischen Spielszenarios.
+
+*Auszuführende Schritte:*
+
+. Starten des Spiels und Ausführen eines normalen Spieldurchgangs.
+. Verwendung der FPS-Average Klasse, um den Durchschnitt der Bildwiederholrate im 5 Sekunden Intervall kontinuierlich aufzuzeichnen.
+. Dokumentation und Analyse der aufgezeichneten FPS-Daten über einen angemessenen Zeitraum.
+
+*Erwartetes Ergebnis:* Das Spiel läuft mit einer durchschnittlichen Bildwiederholrate von 27-30 FPS (10% Abweichungstoleranz) ab den ersten 10 Sekunden (Ladezeit).

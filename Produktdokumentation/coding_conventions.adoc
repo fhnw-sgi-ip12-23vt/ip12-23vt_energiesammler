@@ -1,0 +1,18 @@
+= Coding Conventions
+
+== Verwendete Konventionen
+
+Für die Convention des Codes wurde folgende verwendet: https://gitlab.fhnw.ch/ip12-23vt/ip12-23vt_energiesammler/game-code/-/blob/main/src/main/config/energiesammler_checkstyle.xml?ref_type=heads[EnergieSammler - Java Code Conventions]
+
+dies ist eine Ableitung von https://google.github.io/styleguide/javaguide.html[Google Java Style Guide]
+
+Vorlage: https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml[Github CheckStyle Google]
+
+== Sicherstellung der Einhaltung der Konventionen
+
+Um sicherzustellen dass die Coding Conventions eingehalten werden, wurden die Team Mitglieder welche am Code entwickeln über die Conventions gebrieft.
+
+Weiterhin wird der Code fortlaufend vom Developer und Quality Manager überprüft dass der neu erstellte Code den Conventions entspricht.
+Die Überprüfung findet auch automatisch mit dem Maven Plugin maven-checkstyle-plugin im Pipeline Build statt. Bei einem Missachten der Checkstyle wird das ganze Team per Email benachrichtigt.
+
+Um auch weitere Convetions ohne Checkstyle zu überprüfen, wie Dead Code, wird IntelliJ IDEA Analyze Funktion zusätzlich angewendet.

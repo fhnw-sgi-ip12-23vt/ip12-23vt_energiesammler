@@ -1,0 +1,14 @@
+== Test E_3
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/E_3_ControllerLatenz.adoc[]
+
+*Status:* Erfolgreich
+
+*Bemerkungen:* Die Latenz in der Konsole reicht von 10 bis 45 ms, ist aber im Spiel durchschnittlich zwischen 14 und 17ms

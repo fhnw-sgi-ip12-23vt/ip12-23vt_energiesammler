@@ -1,0 +1,13 @@
+TC F.1: Steuerung der Spielfigur
+
+*Beschreibung:* Bei diesem Test soll überprüft werden, ob der Spieler die Spielfigur im Spiel steuern kann.
+
+*Annahmen und Voraussetzungen:* Das Spiel muss erfolgreich gestartet und geladen sein. Der Spieler muss eine Eingabemethode (z.B. Tastatur, Controller) zur Verfügung haben.
+
+*Testdaten:* Eingabe für Bewegungen nach links, rechts, oben und unten.
+*Auszuführende Schritte:*
+
+ . Starte das Spiel.
+ . Bewege die Spielfigur mit den vorgegebenen Tasten nach links, rechts, oben und unten.
+
+*Erwartetes Ergebnis:* Die Spielfigur bewegt sich auf dem Bildschirm entsprechend den Tastatureingaben des Spielers.

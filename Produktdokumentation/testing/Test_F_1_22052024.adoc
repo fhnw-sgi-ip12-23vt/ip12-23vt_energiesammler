@@ -1,0 +1,14 @@
+== Test F_1
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/F_1_SteuerungDerSpielfigur.adoc[]
+
+*Status:* Erfolgreich mit Verbesserungsvorschlag
+
+*Bemerkungen:* Zu Nahe am Rand (links und rechts) bleibt die Spielfigur stecken und man muss neustarten.

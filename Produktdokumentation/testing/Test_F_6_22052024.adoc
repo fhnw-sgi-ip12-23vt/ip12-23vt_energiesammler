@@ -1,0 +1,14 @@
+== Test F_6
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/F_6_AusschaltenVonEnergieverbrauchern.adoc[]
+
+*Status:* Erfolgreich
+
+*Bemerkungen:* Schwierig die Glübirne auszuschalten, aber die Schwierigkeit gefällt mir.

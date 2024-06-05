@@ -1,0 +1,14 @@
+== Test E_2
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/E_2_SpielRuckeln.adoc[]
+
+*Status:* Erfolgreich
+
+*Bemerkungen:* Das Spiel hatte keine grossen Bemerkbaren Ruckeln

@@ -1,0 +1,14 @@
+TC F.2: Springen auf Plattformen
+
+*Beschreibung:* Dieser Testfall prüft, ob der Spieler die Spielfigur auf unterschiedliche Plattformen springen lassen kann.
+
+*Annahmen und Voraussetzungen:* Die Spielfigur ist bereits auf einer Startplattform positioniert. Das Spiel läuft flüssig ohne technische Störungen.
+
+*Testdaten:* Sprungtaste (z.B. Grüner Button oder Leertaste).
+
+*Auszuführende Schritte:*
+
+ . Nähern Sie sich der Kante einer Plattform.
+ . Drücken Sie die Sprungtaste, um auf eine höher gelegene Plattform zu springen.
+
+*Erwartetes Ergebnis:* Die Spielfigur springt und landet sicher auf der nächsten Plattform.

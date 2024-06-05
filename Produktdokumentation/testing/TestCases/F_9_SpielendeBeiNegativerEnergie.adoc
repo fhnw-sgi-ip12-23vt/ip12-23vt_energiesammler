@@ -1,0 +1,13 @@
+TC F.9: Spielende bei negativer Energie
+
+*Beschreibung:* Dieser Testfall überprüft, ob das Spiel endet (Spielzustand Game Over), wenn die Energie des Spielers unter 0 fällt.
+
+*Annahmen und Voraussetzungen:* Die Spielfigur ist aktiv im Spiel und hat bereits Energie gesammelt.
+
+*Testdaten:* Aktuelle Energiemenge der Spielfigur.
+
+*Auszuführende Schritte:*
+
+. Verbrauche Energie durch Spielaktionen (z.B. Kollision mit Energieverbrauchern oder betreten von Türen), bis die Energiemenge unter 0 fällt.
+
+*Erwartetes Ergebnis:* Das Spiel zeigt das Ende an und beendet die aktuelle Spielsitzung.

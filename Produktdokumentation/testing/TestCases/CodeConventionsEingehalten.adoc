@@ -1,0 +1,15 @@
+TC: W.4: Code Conventions eingehalten
+
+*Testbeschreibung:* Überprüfen ob alle Klassen die Code Conventions einhalten.
+
+*Annahmen und Voraussetzungen:* Es existiert ein Checkstyle für die verwendete Code Convention mit welcher der Code überprüft werden kann.
+
+*Testdaten:* Alle Klassen werden als korrekt formatiert angezeigt.
+
+*Auszuführende Schritte:*
+
+. Öffnen einer Klasse.
+. Ausführen des Checkstyles.
+. Alle Fehler beheben bis keine mehr vorhanden sind.
+
+*Erwartetes Ergebnis:* Alle Checkstyle tests werden als erfolgreich ausgegeben.

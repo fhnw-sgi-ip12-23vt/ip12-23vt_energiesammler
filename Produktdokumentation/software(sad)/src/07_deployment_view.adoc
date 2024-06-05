@@ -1,0 +1,32 @@
+[[section-deployment-view]]
+== Verteilungssicht
+
+=== Infrastruktur Ebene 1
+
+image:P1_Deployment.png[Deployment EnergieSammler]
+
+Das Endprodukt ist ein Arcade-Automat, welcher im Standort von Primeo Energie AG in Basel, Münchenstein ausgestellt wird.
+
+==== Software-Voraussetzungen:
+* Betriebssystem: Pi4J-Basic-OS für Raspberry Pi (oder kompatibles System)
+* Java Runtime Environment (JRE) SE 17 (oder höher)
+* Processing.core.PApplet Bibliothek
+* Optional:
+Anbindung an Datenbank für Datenspeicherung und Verteilung. z.B. für Konfigurationen und Online-Funktionalitäten.
+
+==== Konfiguration und Einrichtung:
+* Die Java-Anwendung (EnergieSammler.jar) enthält den kompilierten Java-Quelltext und alle Abhängigkeiten.
+* Das Spiel wird direkt auf dem Raspberry Pi ausgeführt, wobei die Processing.core.PApplet Bibliothek für die grafische Darstellung und Spielsteuerung verwendet wird.
+* Für die Anbindung an externe Ressourcen (falls implementiert) sind entsprechende Netzwerkzugänge und Konfigurationen erforderlich.
+
+==== Benutzerinterface
+
+* Die Ausgabe der Benutzeroberfläche wird über den angeschlossenen Monitor dargestellt.
+** Port: HDMI
+* Die Eingabe erfolgt mittels JoyStick und 2 Buttons (Knöpfe/Tasten).
+** Port USB-Typ-A. Alternative: GPIO
+* Die Administrative Spiel-Konfiguration erfolgt mittels Tastatur und Maus.
+** Port USB-Typ-A
+
+==== Offene Punkte
+* Hardware-Anforderungen: Spezifikation der minimalen und empfohlenen Hardware-Anforderungen für eine optimale Spielerfahrung.

@@ -1,0 +1,14 @@
+TC F.11: Spiel Neustart
+
+*Beschreibung:* Dieser Testfall soll überprüfen, ob der Spieler nach dem Ansehen der Energiebilanz ein neues Spiel starten kann.
+
+*Annahmen und Voraussetzungen:* Das Spiel ist beendet, und der Spieler befindet sich auf der Seite mit der Energiebilanz.
+
+*Testdaten:* -
+
+*Auszuführende Schritte:*
+
+. Energiebilanz-Seite Auswahl der Option zum Hauptmenu des Spiels zu gehen.
+. Hauptmenu Auswahl um neues Spiel zu starten.
+
+*Erwartetes Ergebnis:* Das Spiel geht zur Spielcharakter-Auswahl-Seite.

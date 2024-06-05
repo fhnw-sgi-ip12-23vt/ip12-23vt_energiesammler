@@ -1,0 +1,14 @@
+== Test F_7
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/F_7_SpielPausieren.adoc[]
+
+*Status:* Erfolgreich
+
+*Bemerkungen:* Vom Pausieren bis zu der Anzeige des Pausenmenüs dauert es länger als erwartet (ca. 3-5 Sekunden)

@@ -1,0 +1,16 @@
+[[section-glossary]]
+== Glossar
+
+[cols="e,2e" options="header"]
+|===
+|Begriff |Definition
+
+|GPIO
+|General Purpose Input/Output: En allgemeiner digitaler Kontaktstift an einem integrierten Schaltkreis (IC), dessen Verhalten, unabhängig, ob als Eingabe- oder Ausgabekontakt, durch logische Programmierung frei bestimmbar ist.
+
+|Processing
+|Processing ist eine Java-Bibliothek, welche die Entwicklung von Visuell basierten Programmen vereinfacht.
+
+|PI4J
+|PI4J ist eine Java-Bibliothek, mit welcher es möglich ist auf einem Raspberry Pi Java-Anwendungen an die Hardware anzubingen um verschiedene Ein- und Ausgaben mit dessen Hardware zu verwenden.
+|===

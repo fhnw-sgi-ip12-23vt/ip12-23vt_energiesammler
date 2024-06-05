@@ -1,0 +1,15 @@
+TC: W.3: Neue Tür Implementieren
+
+*Testbeschreibung:* Testen wie einfach ein Entwickler eine neue Tür-Aufgabe implementieren kann.
+
+*Annahmen und Voraussetzungen:* Es gibt verschiedene Tür-Aufgaben in der dazugehörenden Datei.
+
+*Testdaten:* Überprüfung ob die Testperson selbstständig eine neue Tür-Aufgabe hinzufügen konnte.
+
+*Auszuführende Schritte:*
+
+. Bereitstellen des Codes und des SAD.
+. Testperson Aufgabe geben welche sie zu den Tür-Aufgaben hinzufügen soll.
+. Rückmeldung der Testperson dokumentieren und beobachtete Probleme.
+
+*Erwartetes Ergebnis:* Die Testperson kann selbstständig eine neue Tür-Aufgabe hinzufügen.

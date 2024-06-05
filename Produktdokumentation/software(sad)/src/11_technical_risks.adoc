@@ -1,0 +1,52 @@
+[[section-technical-risks]]
+== Risiken und technische Schulden
+
+|===
+| Nr. | Riskio Beschreibung | Qualität | Kosten | Zeit | Wahrscheinlichkeit | Verantwortlich | Massnahmen
+
+| 1
+| Lokaler Code geht verloren
+| 2
+| 0
+| 4
+| 25.00%
+| Alle
+| Nach jeder grossen Änderung oder mindestens einmal am Tag commiten und pushen oder/und ein Backup vom Code erstellen.
+
+| 2
+| GitLab Ausfall
+| 2
+| 0
+| 4
+| 5.00%
+| Alle
+| Lokale Ablage des Codes up-to-date halten
+
+| 3
+| Bugs im Code
+| 4
+| 0
+| 4
+| 50.00%
+| Alle
+| Zeit für Testing und Recherchen in die Zeitplanung miteinbeziehen
+
+| 4
+| Self-made Hardware geht kaputt
+| 0
+| 2
+| 3
+| 10.00%
+| Alle
+| Zeit und Budget dafür einplanen / Mit Sorgfalt behandeln
+
+| 5
+| Mangelnde Spiel Performance
+| 4
+| 0
+| 4
+| 20.00%
+| Alle
+| Genügend Zeit für Testing und Umprogrammierung des Programms einplanen
+
+|===

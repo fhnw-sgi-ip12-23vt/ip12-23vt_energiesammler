@@ -1,0 +1,15 @@
+TC F.10: Anzeige der Energiebilanz
+
+*Beschreibung:* Dieser Testfall prüft, ob nach dem Spielende die Energiebilanz korrekt angezeigt wird.
+
+*Annahmen und Voraussetzungen:* Das Spiel wurde aufgrund alle Levels erfolgreich gespielt oder von Energiemangel beendet (Spielzustand Game Over).
+
+*Testdaten:* Gesammelte und verbrauchte Energiemengen während des Spiels.
+
+*Auszuführende Schritte:*
+
+. Bei Spielzustand Game Over, die Sprungtaste drücken (Grüner Button oder Leertaste) um den Game Over Bildschirm zu überspringen.
+. Betrachten der Energiebilanz auf dem Bildschirm.
+. Sprungtaste um die nächste Energiebilanz zu betrachten.
+
+*Erwartetes Ergebnis:* Die Energiebilanz wird korrekt angezeigt, inklusive Details über gesammelte und verbrauchte Energie.

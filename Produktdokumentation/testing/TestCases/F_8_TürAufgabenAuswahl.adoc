@@ -1,0 +1,15 @@
+TC F.8: Tür Aufgaben Auswahl
+
+*Beschreibung:* Dieser Testfall prüft, ob der Spieler durch das Betreten einer Tür die oben stehenden Aufgabenboxen auswählen und bei ausreichender Energie ins nächste Level gelangen kann.
+
+*Annahmen und Voraussetzungen:* Das Spiel ist geladen, die Spielfigur hat ausreichend Energie gesammelt, und eine Tür mit Aufgabenboxen ist im aktuellen Level präsent.
+
+*Testdaten:* Verbleibende Energiemenge der Spielfigur; Position der Tür.
+
+*Auszuführende Schritte:*
+
+. Steuern der Spielfigur zur Tür.
+. Anzeige einer Aufgabenbox vor dem stehen einer Tür.
+. Betreten der Tür um ins nächste Level zu gelangen.
+
+*Erwartetes Ergebnis:* Die Spielfigur tritt erfolgreich ins nächste Level ein, falls genügend Energie vorhanden ist.

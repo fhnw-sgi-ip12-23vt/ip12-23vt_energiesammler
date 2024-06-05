@@ -1,0 +1,15 @@
+TC: W.1: Architektur Übersichtlich
+
+*Testbeschreibung:* Überprüfung der Übersichtlichkeit der Architektur für externe Entwickler.
+
+*Annahmen und Voraussetzungen:* Die Lösungsstrategie und der Entwurf des Spiels sind mittels UML Diagrammen und Text im SAD dokumentiert.
+
+*Testdaten:* Messung der Zeit bis die Grundlagen der Architektur verstanden wurden.
+
+*Auszuführende Schritte:*
+
+. Bereitstellen des SAD und des Codes.
+. Fragen verschiedener Funktionen und wo die Testperson vermutet befinden sich bestimmte Teile des Codes.
+. Dokumentieren wie viel Erfolgreich beantwortet und auswerten ob genügend korrekt.
+
+*Erwartetes Ergebnis:* Die Testperson kann innerhalb von 15 Minuten 90% der Fragen korrekt beantworten.

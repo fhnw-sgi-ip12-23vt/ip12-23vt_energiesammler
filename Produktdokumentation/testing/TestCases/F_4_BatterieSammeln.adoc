@@ -1,0 +1,14 @@
+TC F.4: Batterien sammeln
+
+*Beschreibung:* Testet, ob der Spieler Batterien durch Berührung im Spiel sammeln kann.
+
+*Annahmen und Voraussetzungen:* Batterien sind über das Spielfeld verteilt. Die Spielfigur startet mit einer Batterie (Standard).
+
+*Testdaten:* Positionen der Batterien im Spiel.
+
+*Auszuführende Schritte:*
+
+ . Bewege die Spielfigur zu einer Batterie.
+ . Berühre die Batterie.
+
+*Erwartetes Ergebnis:* Die Batterieanzeige der Spielfigur erhöht sich um 1.

@@ -1,0 +1,148 @@
+[[section-quality-scenarios]]
+== Qualitätsanforderungen
+
+.Weiterführende Informationen
+
+Siehe https://docs.arc42.org/section-10/[Qualitätsanforderungen] in der online-Dokumentation (auf Englisch!).
+
+=== Qualitätsbaum
+
+=== Qualitätsszenarien
+
+Die folgende Qualitätsanforderungen sind für das Softwareprodukt EnergieSammler definiert:
+
+[options="header", cols="1, 2, 8"]
+|===
+| ID | Qualitätsziel | Beschreibung
+
+| Q01
+| **W**artbarkeit
+| Einfache Aktualisierung und Fehlerbehebung sind wichtig, um das Spiel langfristig attraktiv und funktional zu halten. Dies erleichtert die kontinuierliche Verbesserung und Anpassung an sich ändernde Anforderungen oder Nutzerfeedback.
+
+| Q02
+| **K**ompatibilität
+| Um eine breite Zugänglichkeit auf verschiedenen Endgeräten, insbesondere auf unterschiedlichen Raspberry Pi-Modellen, zu gewährleisten, ist Kompatibilität ein zentrales Qualitätsziel. Die Verwendung von Java trägt zur plattformübergreifenden Kompatibilität bei und ermöglicht eine einfache Portierung des Spiels auf verschiedene Hardware-Konfigurationen.
+
+| Q03
+| **F**unktionale Eignung
+| Das Spiel soll mehrere gängigen Funktionen für Jump n Run Spiele bieten, die nahtlos und effizient funktionieren. Dazu gehören nicht nur die grundlegenden Bewegungsmechaniken, sondern auch verschiedene interaktive Elemente, die das Spielerlebnis bereichern. Dies gewährleistet, dass das Spiel technisch solide und benutzerfreundlich ist.
+
+| Q04
+| **E**ffizienz
+| Um auf dem Raspberry Pi eine gute Performance zu gewährleisten, ist Effizienz in der Ressourcennutzung und schnelle Reaktionszeiten notwendig. Dies trägt zu einem flüssigen Spielerlebnis bei, auch bei begrenzter Hardwareleistung.
+
+| Q05
+| **Z**uverlässigkeit
+| Das Spiel soll stabil und konsistent ohne Unterbrechungen oder Fehler laufen. Es ist wichtig, dass das Spiel auch unter verschiedenen Bedingungen und über längere Zeit hinweg seine Funktionalität bewahrt. Dies schliesst die Fähigkeit ein, mit unerwarteten Benutzereingaben umzugehen.
+
+| Q06
+| **U**sability
+| Das Ziel ist, ein Spiel zu entwickeln, das leicht zu erlernen und zu bedienen ist, wobei die Steuerung intuitiv und die Benutzeroberfläche klar strukturiert ist. Das Spiel sollte so gestaltet sein, dass Spieler unabhängig von ihrer Vorerfahrung mit ähnlichen Spielen effektiv interagieren können.
+
+| Q07
+| **L**ernförderung
+| Das Spiel soll Jugendlichen auf spielerische Weise Wissen über Energieressourcen, den alltäglichen Energieverbrauch und die damit verbundenen globalen Herausforderungen vermitteln. Die Integration interaktiver Lernelemente trägt zur Bewusstseinsbildung und Förderung eines nachhaltigen Umgangs mit Energie bei.
+
+|===
+
+
+Die untenstehenden Szenarien beschreiben die Qualitätsziele detaillierter: 
+
+[options="header", cols="1,9"]
+|===
+| ID | Szenario
+
+| W01
+| Jemand mit Grundkenntnissen in UML und Jump n Run möchte einen Einstieg in die Architektur von EnergieSammler finden. Lösungsstrategie und Entwurf erschliessen sich ihr oder ihm innerhalb von 15 Minuten.
+
+| W02
+| Ein Architekt, der arc42 anwenden möchte, sucht zu einem beliebigen Kapitel des Template einen konkreten Themeninhalt und findet ihn unverzüglich in der Dokumentation.
+
+| W03
+| Ein Entwickler implementiert eine neue Tür-Aufgabe. Er kann sie ohne Änderung und ohne Übersetzung vorhandenen Codes in bestehender Applikation integrieren.
+
+| W04
+| Code Convention sind im ganzen Quellcode eingehalten und mit dem Checkstyle (Plugin) in POM  mittels Maven Verify Phase überprüft.
+
+| K01
+| Der Kunde kann Levels leicht in .csv Dateien ändern und erstellen.
+
+| K02
+| Der Kunde kann die Sprache im Spiel leicht in .properties Dateien ändern und erstellen.
+
+| K03
+| Der Kunde kann die Hardware der Spielsteuerung mit GPIO kompatiblen Teile austauschen und im Spiel verwenden.
+
+| F01
+| Der Spieler kann im Spiel die Spielfigur steuern.
+
+| F02
+| Der Spieler kann mit der Spielfigur auf Plattformen springen.
+
+| F03
+| Der Spieler kann im Spiel Energie durch Berührung sammeln.
+
+| F04
+| Der Spieler kann im Spiel Batterie durch Berührung sammeln.
+
+| F05
+| Bei einer Berührung mit einem Energieverbraucher (Gegner) wird die eingesammelte Energie verloren.
+
+| F06
+| Bei einem Sprung auf den Energieverbraucher, wird dieser ausgeschaltet.
+
+| F07
+| Das Spiel kann jederzeit pausiert werden und ein Pausenmenu ist ersichtlich.
+
+| F08
+| Der Spieler kann mit dem eintreten von Türen Aufgabenboxen auswählen und bei genügend verbleibenden Energie in das nächste Level kommen.
+
+| F09
+| Das Spiel ist beendet, wenn der Spieler weniger als 0 Energie hat.
+
+| F10
+| Nach dem Spiel Ende, sieht der Spieler in der Energiebilanz wieviel Energie er gesammelt und verbraucht hat.
+
+| F11
+| Nach dem ansehen der Energiebilanz , kann der Spieler ein neues Spiel starten.
+
+| F12
+| Vor dem wirklichen Spielstart, kann der Spieler zwischen 2 Charakteren auswählen.
+
+| F13
+| Nach der Auswahl des Spielcharakters wird das Tutorial durchlaufen.
+
+| F14
+| Der Spieler kann eine Auswahl von mehreren Sprachen treffen.
+
+| E01
+| Das Spiel läuft flüssig mit einem Durchschnitt von mindestens 30 FPS mit einer Bildschirmauflösung von 1920x1080 auf der Hardware Raspberry Pi 4 8 Gb Model.
+
+| E02
+| Das Spiel läuft im Durchschnitt flüssig und Spiel-Ruckeln (Lags) kommen nur selten vor.
+
+| E03
+| Die Spielsteuerung reagiert innerhalb von 100ms (https://displaylag.com/console-latency-exploring-video-game-input-lag/#:~:text=Generally%20speaking%2C%20a%20game%20running%20at%2060%20FPS%20should%20strive%20for%20a%20controller%20latency%20around%2067ms%2C%20whereas%20a%20game%20running%20at%2030%20FPS%20should%20shoot%20for%20100ms./[Quelle]) auf eine Spielerbewegung (Controller latency).
+
+| Z01
+| Das Spiel verwaltet die Spielzustände wie Game Start oder Game Over korrekt. Ein unerwarteter Spielzustand Wechsel kommt nicht vor.
+
+| Z02
+| Das Spiel soll die Energie des Spielers effizient verwalten. Dabei darf die Energie des Spielers zu keinem Zeitpunkt unter 0 fallen oder die maximal mögliche Batteriekapazität überschreiten.
+
+| Z03
+| Das Spiel verwaltet die Bewegung des Spielers. Die Bewegung ausserhalb des Levels oder der Kamera ist nicht möglich.
+
+| Z04
+| Das Spiel verwaltet die Bewegung der Energieverbraucher. Die Bewegung ausserhalb des Levels  oder der Plattform ist nicht möglich.
+
+| U01
+| Ein neuer Spieler, ohne Vorerfahrung in Jump n Run Spielen, sollte in der Lage sein, das Tutorial zu beginnen und die Grundsteuerung (Laufen, Springen, Sammeln) innerhalb der ersten 3 Minuten des Spielens zu verstehen und anzuwenden.
+
+| U02
+| Der Spieler navigiert ohne Schwierigkeiten durch das Menü und kann die Spielsprache innerhalb von 30 Sekunden über eine einfach zu verstehende Option in den Einstellungen ändern.
+
+| L01
+| Das Spiel ist so gestaltet, dass es die Spieler dazu anregt, den Energieverbrauch von alltäglichen Haushaltsgeräten zu verstehen und einzuordnen. Nach dem Spielen sind die Spieler in der Lage, den Verbrauch dieser Geräte korrekt zu vergleichen und einzuschätzen.
+
+|===

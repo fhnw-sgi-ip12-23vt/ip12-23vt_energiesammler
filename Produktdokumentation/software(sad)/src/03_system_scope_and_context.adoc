@@ -1,0 +1,55 @@
+[[section-system-scope-and-context]]
+== Kontextabgrenzung
+
+=== Fachlicher Kontext
+
+==== Spielerinteraktion
+Der Spieler steuert eine Spielfigur in einer 2D-Jump’n’Run-Welt. Die Navigation erfolgt in vier Richtungen, wobei die Figur Gegnern ausweicht, von Plattform zu Plattform springt, Energieressourcen sammelt und zwischen zwei Aufgaben wählen muss, um in das nächste Level zu gelangen.
+
+==== Spielumgebung
+Die Spielwelt umfasst interaktive Elemente wie Plattformen, Aufgaben und energieverbrauchende Haushaltsgeräte als Gegner. Ein umfassendes Hauptmenü bietet Optionen für Charakterauswahl, Sprachauswahl und Pausierung des Spiels.
+
+Adminstratoren haben Zugriff auf Administrative Einstellungen. Diese ermöglichen Anpassungen von Lautstärke, Schwierigkeitsgrad, Anzahl der Leben und Simulation von Stromkosten.
+
+Nach jedem Spiel wird eine detaillierte Bilanz des Energieverbrauchs und der damit verbundenen Kosten präsentiert.
+
+==== Lerninhalte
+Das Spiel zielt darauf ab, Bewusstsein und Wissen über den Energieverbrauch  von Haushaltsgeräten und alltäglichen Aufgaben zu vermitteln. Es lehrt effiziente Energieverwendung und sensibilisiert für Energieeffizienz.
+
+=== Technischer Kontext
+
+==== Spielplattform
+Entwickelt für den Raspberry Pi unter Verwendung von PI4J für die Java-Integration, berücksichtigt das Spiel spezifische technische Einschränkungen und Möglichkeiten (z.B. Leistungsfähigkeit, Portabilität).
+
+==== User Interface
+Die Benutzeroberfläche ermöglicht eine intuitive Spielsteuerung und bietet Einstellungsmöglichkeiten. Sie beinhaltet Anzeigen für Energielevel, Spielstand und ein Tutorial. Das UI ist so gestaltet, dass es die Spielerfahrung unterstützt und das Lernen fördert.
+
+==== Externe Library processing.core.PApplet
+Für die Spielentwicklung wird die externe Bibliothek processing.core.PApplet eingesetzt, die grundlegende Funktionen für die Spielprogrammierung bereitstellt, einschliesslich Grafik, Interaktion und Steuerung
+
+==== CSV-Dateien
+Um verschiedene Levels einfach und erweiterbar zu erstellen werden csv-Dateien verwendet. Mittels verschiedenen Zahlen und Kleinbuchstaben können die unterschiedlichen Spielelemente und dessen Ort in einem Level definiert werden.
+
+==== Java-Properties-Datei
+Um Mehrsprachigkeit im Spiel zu ermöglichen werden Java-Properties-Dateien verwendet. Dies ermöglicht das leichte Einfügen und Anpassen der möglichen Spracheinstellungen der Benutzeroberfläche des Spiels.
+
+==== Externe Ressourcen
+Optionale Anbindung an externe Ressourcen wie Mehrsprachigkeit oder Online-Datenbanken für erweiterte Funktionen oder In-Game-Strompreise (für Bilanz) zu ermöglichen.
+
+**<Diagramm oder Tabelle>**
+
+**<optional: Erläuterung der externen technischen Schnittstellen>**
+
+.Hardware (Raspberry Pi)
+- Kanal: Physische Konsole.
+- Technische Schnittstelle: Joystick, Knöpfe, Bildschirm.
+
+.Mehrsprachigkeit (Text- oder Exceldateien)
+- Kanal: Interne Dateisysteme.
+- Technische Schnittstelle: Dateien im Java-Properties-Format für Mehrsprachigkeit.
+
+**<Mapping fachliche auf technische Schnittstellen>**
+
+- Spieleraktionen (Eingabe): Erfasst durch Joystick, Buttons oder Tastatur und Maus. Wird durch Raspberry Pi verarbeitet.
+- Spiel-Feedback und Lerninhalte (Ausgabe): Angezeigt auf Raspberry Pi Bildschirm.
+- Sprachauswahl und -anzeige (Ein-/Ausgabe): Verwaltet durch interne Dateisysteme, Darstellung in verschiedenen Sprachen.

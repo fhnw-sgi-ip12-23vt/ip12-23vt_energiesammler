@@ -1,0 +1,15 @@
+TC: E.2: Spiel Ruckeln
+
+*Testbeschreibung:* Überwachung auf Ruckeln oder Lags während des Spielverlaufs.
+
+*Annahmen und Voraussetzungen:* Das Spiel läuft unter normalen Bedingungen auf einem Raspberry Pi 4.
+
+*Testdaten:* Beobachtungen und Zählung von Lags während eines normalen Spieldurchgangs.
+
+*Auszuführende Schritte:*
+
+. Starten des Spiels und kontinuierliches Spielen während eines normalen Spieldurchgangs (geschätzte Zeitspanne von 3min).
+. Aufmerksames Beobachten und Notieren jedes auftretenden Ruckelns oder Lag-Ereignisses.
+. Bewertung, ob Lags selten auftreten oder häufiger als akzeptabel sind.
+
+*Erwartetes Ergebnis:* Spiel-Ruckeln kommt nur selten vor und beeinträchtigt das Spielerlebnis nicht wesentlich. Spielruckeln tritt weniger als 4 mal pro Minute auf.

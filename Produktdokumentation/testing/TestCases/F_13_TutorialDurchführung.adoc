@@ -1,0 +1,13 @@
+TC F.13: Tutorial Durchführung
+
+*Beschreibung:* Dieser Testfall prüft, ob nach der Auswahl des Spielcharakters das Tutorial durchlaufen wird und anschliessend das Spiel beginnt.
+
+*Annahmen und Voraussetzungen:* Ein Spielcharakter wurde ausgewählt, und das Spiel hat das Tutorial Bildschrim geladen.
+
+*Testdaten:* Ablauf und Inhalt des Tutorials.
+
+*Auszuführende Schritte:*
+
+. Folge den Anweisungen im Tutorial, um die Spielmechaniken des Spiels zu erlernen.
+
+*Erwartetes Ergebnis:* Das Tutorial wird vollständig durchgeführt, und nach Abschluss beginnt das eigentliche Spiel automatisch.

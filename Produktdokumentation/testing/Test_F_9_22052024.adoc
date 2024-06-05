@@ -1,0 +1,14 @@
+== Test F_9
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/F_9_SpielendeBeiNegativerEnergie.adoc[]
+
+*Status:* Erfolgreich
+
+*Bemerkungen:* Habe ich absichtlich testen müssen.

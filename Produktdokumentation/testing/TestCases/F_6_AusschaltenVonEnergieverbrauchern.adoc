@@ -1,0 +1,14 @@
+TC F.6: Ausschalten von Energieverbrauchern durch Springen
+
+*Beschreibung:* Dieser Testfall soll überprüfen, ob der Energieverbraucher ausgeschaltet wird, wenn die Spielfigur darauf springt.
+
+*Annahmen und Voraussetzungen:* Energieverbraucher sind im Level präsent.
+
+*Testdaten:* Position des Energieverbrauchers.
+
+*Auszuführende Schritte:*
+
+. Steuern der Spielfigur direkt über den Energieverbraucher.
+. Ausführen eines Sprungs auf den Energieverbraucher.
+
+*Erwartetes Ergebnis:* Der Energieverbraucher wird deaktiviert (Gegner verschwindet) und Punkte werden oben in der Punktstandanzeige erhöt, je nach definierten Wert des Energieverbrauchers .

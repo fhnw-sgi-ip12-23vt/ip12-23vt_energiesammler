@@ -1,0 +1,24 @@
+TC E.3: Controller Test
+
+*Testbeschreibung:* Messung der Reaktionszeit der Spielsteuerung nach Betätigung eines Controllers innerhalb des Spiels.
+
+*Annahmen und Voraussetzungen:*
+
+- Das Spiel ist auf einem kompatiblen System geladen und funktionsfähig.
+- Ein kompatibler Controller ist angeschlossen und konfiguriert.
+- Die LatencyMonitor-Klasse ist im Spiel integriert und aktiviert, um die Latenz zu messen.
+
+*Testdaten:* Die Zeitmessung erfolgt von der Betätigung des Controllers bis zur sichtbaren Reaktion im Spiel (z.B. Bewegung der Spielfigur).
+
+*Auszuführende Schritte:*
+
+. Starten Sie das Spiel und navigieren Sie zum Hauptspielbildschirm, wo Controller-Eingaben möglich sind.
+. Führen Sie eine definierte Aktion im Spiel mittels des Controllers aus, wie das Springen oder Bewegen der Spielfigur.
+. Beobachten und notieren Sie die gemessene Latenzzeit, die vom LatencyMonitor ausgegeben wird.
+. Wiederholen Sie den Vorgang mehrmals, um eine durchschnittliche Latenz zu bestimmen.
+
+*Erwartetes Ergebnis:*
+Die Steuerung reagiert auf die Controller-Eingabe innerhalb von 70 Millisekunden, wie durch die Ausgabe des LatencyMonitor angezeigt.
+Die gemessenen Latenzzeiten sollten konsistent sein und die Leistungsfähigkeit des Spiels unter Beweis stellen.
+
+Als Notiz: Dieser Test deckt nur den selbstgeschriebenen Code ab, was vorher geschieht wird nicht getestet und mit 30ms Latenz geschätzt (70 + 30 = 100ms Grenze)

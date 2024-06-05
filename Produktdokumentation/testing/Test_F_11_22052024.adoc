@@ -1,0 +1,14 @@
+== Test F_11
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/F_11_SpielNeustart.adoc[]
+
+*Status:* Erfolgreich
+
+*Bemerkungen:*

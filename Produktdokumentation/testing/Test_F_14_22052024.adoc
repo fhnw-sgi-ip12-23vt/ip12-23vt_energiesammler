@@ -1,0 +1,14 @@
+== Test F_14
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/F_14_SprachauswahlImSpiel.adoc[]
+
+*Status:* Nicht erfolgreich
+
+*Bemerkungen:* Das Spiel stürzt auf dem Raspberry Pi ab. Lokal auf dem PC funktioniert die Sprachauswahl jedoch nur bei den Türaufgaben.

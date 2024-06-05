@@ -1,0 +1,35 @@
+[[section-runtime-view]]
+== Laufzeitsicht
+
+=== Wichtige Abläufe oder Features:
+
+Spiellogik: ::
+Die Platformer-Klasse ist das Herzstück der Spiellogik. Sie enthält wichtige Methoden wie setup zum vorbereiten verschiedener Objekte und Variablen welche im Spieldurchlauf benötigt werden und draw welche über den Drawer das Spiel zeichnet und den Ablauf managed. Die draw Methode des Drawers stellt je nach momentanem Spielstand die Elemente dar und verarbeitet die Eingabe.
+
+image::Sequenzdiagramm_Spiellogik.png["Sequenzdiagramm Spiellogik"]
+
+Sammeln von Energie: ::
+Durch die collectEnergy und collectBattery Methoden kann der Spieler Energie sammeln, was ein zentrales Feature des Spiels ist. Die Methode wird über den Drawer aufgerufen wenn das Spiel nicht im Tutorial oder Game Over ist. Der Drawer wird über die Draw Methode vom Platformer aufgerufen um alle Elemente zu zeichnen und die Spiellogik auszuführen.
+
+image::Sequenzdiagramm_Energie_und_Batterie.png["Sequenzdiagramm Energie sammeln"]
+
+Interaktion mit Gameobjects: ::
+Über Klassen wie Door und Energy und deren Methoden (getText, getCost, getPower) können Informationen abgerufen werden welche in GameLogic verwendet werden um bei Interaktion mit einem Objekt korrekt Energie abziehen zu können oder die richtigen Texte anzuzeigen.
+
+image::Sequenzdiagramm_Interaktion_Gameobjects.png["Sequenzdiagramm Interaktion Gameobjects"]
+
+Kollisionserkennung: ::
+Methoden wie checkCollision und resolvePlatformCollisions sind wichtig für die Erkennung von Kollisionen im Spiel, welche die Zustände des Spiel ändern. So kann der Spieler mit verschiedenen Objekten im Spiel interagieren (Energie, Batterie, Gegner und Türen). Diese werden besonders in der updateAll Methode der GameLogic aufgerufen um zu erkennen wie sich der Spieler und die Gegner bewegen können.
+
+=== Interaktionen an kritischen externen Schnittstellen:
+
+Controller-Input: ::
+Die InputManager-Klasse verarbeitet Eingaben von Tastatur und Maus und sowohl Joystick und Buttons durch Methoden wie pressed, handleKeyboardInput, handleJoystickInput.
+
+=== Betrieb und Administration:
+
+Start und Inbetriebnahme: ::
+Die setup Methode in Platformer ist für die Initialisierung der von Platformer verwendeten Objekte zum ausführen der Spiellogik verantwortlich.
+
+Spiel Ende: ::
+Der Zustand isGameOver führt dazu dass das Spiel zu Ende geht wenn der Spieler entweder gewonnen oder verloren hat. Es wird eine kurze Bilanz angezeigt mit den Punkten welche der Spieler gesammelt hat bevor das Spiel zurück ins Hauptmenü geht.

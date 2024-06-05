@@ -1,0 +1,14 @@
+== Test F_10
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/F_10_AnzeigeDerEnergiebilanz.adoc[]
+
+*Status:* Erfolgreich
+
+*Bemerkungen:*

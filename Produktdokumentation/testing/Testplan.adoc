@@ -1,0 +1,89 @@
+= Testplan
+
+// https://de.parasoft.com/blog/how-to-write-test-cases-for-software-examples-tutorial/
+// Beschreiben Sie hier, wann Sie was testen wollen.
+
+== 1. Einleitung
+=== 1.1 Projektübersicht
+- *Projektname*: EnergieSammler
+- *Beschreibung*: Ein Jump 'n' Run Spiel, das Spieler über Energieressourcen und den Energieverbrauch informiert.
+- *Version*: 1.0
+- *Test Manager*: Andro Pavlovic
+- *Erstellungsdatum*: 06.05.2024
+
+=== 1.2 Ziel des Testplans
+- Sicherstellung, dass das Spiel den definierten Qualitätsanforderungen entspricht.
+
+== 2. Testobjekte
+=== 2.1 Funktionen, die getestet werden sollen
+- Bewegungsmechaniken der Spielfigur
+- Interaktive Elemente wie das Sammeln von Energie und Batterien
+- Spielfunktionen wie Türen, Gegner, Energieverbrauch und Levelübergänge
+- Wartbarkeit und Performance
+- Usability und Lernförderungselemente
+
+=== 2.2 Funktionen, die nicht getestet werden
+- Nicht spezifizierte erweiterte Spielmechaniken
+- Sicherheitstests
+- End-to-End-Tests des gesamten Systems
+- Leistungstests auf verschiedenen Hardware-Konfigurationen
+- Marketing- und Vertriebsfunktionen
+
+== 3. Teststrategie
+=== 3.1 Testmethoden
+- *Manuelle Tests*: Wartbarkeit, Kompatibilität, grundlegende Spielfunktionen, Effizienz, Usability, Lernförderung
+- *Automatisierte Tests*: Zuverlässigkeit
+
+=== 3.2 Testarten
+- *Unit-Tests*: Testen einzelner Module (z.B. Bewegungsmechaniken)
+- *Integrationstests*: Testen der Integration verschiedener Module (z.B. Sammeln von Energie und Batterien)
+
+== 4. Testumgebung
+=== 4.1 Hardware
+- Raspberry Pi 4 (8 GB Model)
+
+=== 4.2 Software
+- Betriebssystem: Raspberry Pi OS (von PI4J)
+- Java Runtime Environment (v17)
+- Prcessing Core PApplet
+
+=== 4.3 Testdaten
+- Beispiel-Levels und Konfigurationsdateien (.csv und .properties)
+- GPIO-kompatible Hardware für Steuerungstests
+
+== 5. Testdurchführung
+=== 5.1 Testfallerstellung
+- Testfälle basieren auf den beschriebenen link:../software(sad)/src/10_quality_requirements.adoc[Qualitätsanforderungen].
+
+=== 5.2 Testfalleinrichtung
+- Testfälle werden im Ordner link:./[testing] dokumentiert und organisiert.
+
+== 6. Zeitplan und Verantwortlichkeiten
+=== 6.1 Testzeitplan
+- *Testvorbereitung*: 19.02.2024 bis 22.05.2024
+- Erstellung und Überprüfung der Testfälle
+- Einrichtung der Testumgebung
+- *Unit-Tests*: 10.04.2024 bis 12.06.2024
+- Durchführung und Dokumentation der Unit-Tests (automatisch)
+- Verantwortlich: Qualitätsmanager/in
+- *Integrationstests*: 10.04.2024 bis 12.06.2024
+- Durchführung und Dokumentation der Integrationstests (automatisch und manuell)
+- Verantwortlich: Qualitätsmanager/in
+- *Funktionale Eignungstests*: 10.04.2024 bis 12.06.2024
+- Durchführung und Dokumentation der funktionalen Eignungstests (manuell)
+- Verantwortlich: Qualitätsmanager/in
+- *Effizenz-Tests*: 10.04.2024 bis 12.06.2024
+- Durchführung und Dokumentation der Software-Effizenz (manuell)
+- Verantwortlich: Qualitätsmanager/in
+- *Wartbarkeit-Tests*: 19.02.2024 bis 12.06.2024
+- Durchführung und Dokumentation der Wartbarkeit-Tests inkl. Team internes Code Refactoring (manuell)
+- Verantwortlich: Systemarchitekt/in
+- *Kompatibilitätstests*: 10.04.2024 bis 12.06.2024
+- Durchführung und Dokumentation der Kompatibilitätstests (manuell)
+- Verantwortlich: Entwickler/in
+- *Usability-Tests*: 17.04.2024 bis 29.05.2024
+- Durchführung und Dokumentation der Usability-Tests (manuell)
+- Verantwortlich: Usability-Manager/in
+- *Lernförderungstests*: 06.05.2024 bis 12.06.2024
+- Durchführung und Dokumentation der Lernförderungstests (manuell)
+- Verantwortlich: Usability-Manager/in

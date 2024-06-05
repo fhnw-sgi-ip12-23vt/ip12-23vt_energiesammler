@@ -1,0 +1,14 @@
+== Test F_4
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/F_4_BatterieSammeln.adoc[]
+
+*Status:* Erfolgreich
+
+*Bemerkungen:*

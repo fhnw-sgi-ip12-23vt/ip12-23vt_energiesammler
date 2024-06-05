@@ -1,0 +1,33 @@
+[[section-concepts]]
+== Querschnittliche Konzepte
+
+TODO: Die Konzepte in der Entwicklung und Architektur detailiert dokumentieren.
+
+=== Anpassbarkeit
+
+Da Strompreise und der Verbrauch von verschiedenen elektronischen Geräten mit der Zeit immer anders wird ist es nötig dass dies angepasst werden kann um ein reales Bild darstellen zu können. Weiterhin kann das Interesse an "Energiesammler" besser aufrecht erhalten werden wenn Änderungen an den Levels vorgenommen und auch neue Sprachen hinzugefügt werden können.
+
+Umsetzung:
+
+* Es können neue Tasks erstellt werden oder bestehende verändert werden in der task.properties Datei und den dazugehörenden Sprach properties.
+* Im den Bundles "Task" und "Text" können neue Sprach propterty Dateien hinzugefügt werden um neue Sprachen umzusetzen.
+* Die Levels können einfach in den map.csv Dateien angepasst werden indem die Zeichen ersetzt werden.
+
+=== Performanz
+
+Das Spiel soll flüssig laufen um einen angenehmen Spielablauf zu gewährleisten. Dies ist besonders wichtig für das Spielen auf dem Raspberry Pi.
+
+Umsetzung:
+
+* Das Laden von Bildern wurde minimiert um weniger Leistung aufzuwenden beim Zeichnen der Spieloberfläche.
+* Die Auflösung des Raspberry Pi wurde verringert wodurch das Spiel flüssig läuft auch wenn viele Elemente angezeigt werden.
+
+=== Benutzerschnittstelle
+
+Der Spieler soll intuitiv verstehen können was der Sinn eines Spielelements ist ohne viel Anweisungen. Die Steuerung soll eine gute Übertragung an das Spiel haben um ein direktes Feedback zur Eingabe zu geben.
+
+Umsetzung:
+
+* Es wurden Beschriftungen und Tutorials erstellt um alle nicht klaren Funktionen des Spiels zu erklären.
+* Durch Einsatz von Farben wird dem Spieler gezeigt welche Aktionen positiv oder negativ sind.
+* Die Benutzeroberfläche wurde designt um eine einfaches, selbsterklärendes Menu zu erstellen.

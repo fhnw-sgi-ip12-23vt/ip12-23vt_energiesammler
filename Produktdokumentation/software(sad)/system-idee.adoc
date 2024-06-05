@@ -1,0 +1,76 @@
+= Systemidee
+
+== Kernaufgabe des Systems
+
+Das primäre Ziel des Systems ist es, Jugendliche mittels des interaktiven Jump'n'Run-Spiels "EnergieSammler" für einen bewussten Energiekonsum im Alltag zu sensibilisieren. Dabei liegt der Fokus darauf, spielerisch Wissen und Handlungskompetenz im Bereich Energieverbrauch zu vermitteln. Die Umsetzung und kontinuierliche Weiterentwicklung des Systems obliegen dem Entwicklerteam 7 in Zusammenarbeit mit dem Projektowner Andreas Vogt und unter Einbeziehung der Stakeholder von der Primeo Energie AG, während die benötigten Ressourcen von der Organisation FHNW bereitgestellt werden.
+
+== Kategorie von System
+
+Das Spiel "EnergieSammler" klassifiziert sich als ein eingebettetes System, das auf einem Raspberry Pi mit Java und der Library JavaFX umgesetzt wird. Es bietet als lokale Arcade-Spielanwendung eine intuitive und interaktive Benutzererfahrung mittels Joystick und Knöpfe.
+
+== Wesentliche Qualitätsanforderungen
+
+Für das Spiel "EnergieSammler" auf dem Raspberry Pi sind folgende Qualitätsanforderungen ausschlaggebend:
+
+1. Funktionalität: Das System muss alle definierten Funktionen erfüllen, einschliesslich der korrekten Erfassung und Wiedergabe der Spielstände.
+
+2. Zuverlässigkeit: Das System muss stabil laufen und fehlerfrei funktionieren, um ein unterbrechungsfreies Spielerlebnis zu gewährleisten. Dies ist besonders wichtig, da die Zielgruppe Jugendliche sind, die eine hohe Erwartungshaltung an die ständige Verfügbarkeit und Stabilität digitaler Spiele haben.
+
+3. Effizienz: Flüssige Spielabläufe sind für die User Experience entscheidend. Die Software muss effizient mit den Ressourcen des Raspberry Pi umgehen, um die bestmögliche Performance zu liefern.
+
+4. Benutzbarkeit: Entwicklung einer benutzerzentrierten Schnittstelle, die intuitive Interaktion, einladendes Spielgefühl und leicht verständliche Spielregeln bietet, um Engagement und Freude am Spiel zu fördern.
+
+5. Wartbarkeit: Implementierung einer modularen und gut dokumentierten Softwarearchitektur, die einfache Aktualisierungen und die schnelle Behebung von Problemen ermöglicht.
+
+6. Übertragbarkeit: Sicherstellung, dass "EnergieSammler" auf unterschiedlichen Systemumgebungen des Raspberry Pi lauffähig ist, um maximale Kompatibilität und langfristigen Einsatz zu ermöglichen.
+
+Die aufgeführten Qualitätsmerkmale nach ISO/IEC 9126 sind speziell für das Gesamtsystem "EnergieSammler" ausgewählt und werden sowohl in der Entwicklungsphase als auch während des laufenden Betriebs ständig evaluiert, um eine hohe Zufriedenheit der Endnutzer sicherzustellen.
+
+== Relevante Stakeholder
+
+Für das Spiel "EnergieSammler" wurden folgende Stakeholder als relevant identifiziert:
+
+- Benutzer (Jugendliche):
+Die Hauptnutzer des Spiels sind Sekundarstufe-I-Schüler, die bereits grundlegende Kenntnisse über Umweltthemen mitbringen und durch das Spiel eine vertiefende Auseinandersetzung mit verschiedenen Energieformen und dessen Umgang erleben.
+
+- Stakeholder (Primeo Energie AG):
+Als finanzierendes Energieunternehmen (Sponsor), hat die Primeo Energie AG umfassendes Fachwissen in den Bereichen Umwelt und Energie und bringt wertvolle Branchenerfahrung in das Projekt ein. Ihre langjährige Marktpräsenz und umfassende Erfahrung mit ähnlichen Projekten sind essentiell für die strategische Ausrichtung.
+
+- Product Owner (Andreas Vogt):
+Andreas Vogt ist der Product Owner und hat grosse Vorkenntnisse bezüglich solcher Projekte. Da er schon Jahre lang solche Produkte übernimmt und in einer gewissen Weise leitet, hat er schon viele gute Ideen gesehen. Er ist verantwortlich für die Definition der Projektziele und die Sicherstellung, dass das Produkt die Erwartungen der Benutzer und des Sponsors erfüllt.
+
+- Entwicklerteam (Team 7):
+Das Entwicklerteam ist für die technische Umsetzung des Spiels verantwortlich und gewährleistet, dass die Spielanforderungen effizient umgesetzt und die Qualitätsstandards eingehalten werden. Die Abstimmung mit dem Product Owner und den Stakeholdern ist zentral für den Entwicklungsprozess
+
+- Wartungspersonal (Mitarbeiter/innen von Primeo Energie AG):
+Die Mitarbeiter/innen von Primeo Energie AG sind zuständig für die Instandhaltung und regelmässige Überprüfung des Arcade-Systems, um eine hohe Verfügbarkeit und Betriebssicherheit zu gewährleisten.
+
+- Schul- und Bildungsinstitutionen (FHNW):
+Die Fachhochshule Nordwest Schweiz, kurz FHNW, bringt technisches Fachwissen und moderne pädagogische Ansätze ein, die für die Ausgestaltung des Bildungsaspekts des Spiels entscheidend sind. Ausserdem hat die FHNW den Lichthof im Gebäude 1, wo verschiedene Ressourcen wie Strom, Stühle, Tische, Licht und Wände für die Plakate und Produkte zur Verfügung stellt.
+
+== Schnittstellen zu externen Systemen
+
+Betriebssystem des Raspberry Pi:
+
+- Fachliche Schnittstelle: Das Spiel muss mit dem Betriebssystem des Raspberry Pi kompatibel sein, um Zugriff auf Hardware-Ressourcen wie Grafik und Speicher zu erhalten.
+- Technische Schnittstelle: Das Spiel nutzt die Processing-Bibliothek für Java, welche wiederum auf die nativen APIs des Betriebssystems zugreift.
+
+Anzeigegeräte:
+
+- Fachliche Schnittstelle: Das Spiel gibt grafische Ausgaben auf verbundenen Anzeigegeräten wie Monitoren oder eingebetteten Displays aus.
+- Technische Schnittstelle: Verbindung über HDMI oder andere Videoausgänge des Raspberry Pi.
+
+Schnittstellen für Spielsteuerung:
+
+- Fachliche Schnittstelle: Spieler interagieren direkt mit dem Spiel über Joysticks und Knöpfe, die für ein authentisches Arcade-Spielerlebnis sorgen.
+- Technische Schnittstelle: Joysticks und Knöpfe sind entweder über dedizierte GPIO-Pins (General Purpose Input/Output) oder über USB an den Raspberry Pi angeschlossen.
+
+USB-Anschlüsse für Wartungszugriff:
+
+- Fachliche Schnittstelle: Wartungspersonal nutzt Maus und Tastatur, um das Spiel zu verwalten, beispielsweise für das Starten oder Stoppen des Spiels sowie für Wartungsarbeiten.
+- Technische Schnittstelle: Anschluss von Maus und Tastatur über die USB-Ports des Raspberry Pi.
+
+Schnittstelle für Sprachpakete:
+
+- Fachliche Schnittstelle: Ermöglicht die Erweiterung der Spielsprachen durch manuelles Hinzufügen von Sprachpaketen, die neue Übersetzungen enthalten.
+- Technische Schnittstelle: Das Spiel erkennt und lädt neue Sprachdateien im Java-Properties-Format, die in einem bestimmten Verzeichnis auf dem Dateisystem des Raspberry Pi abgelegt sind.

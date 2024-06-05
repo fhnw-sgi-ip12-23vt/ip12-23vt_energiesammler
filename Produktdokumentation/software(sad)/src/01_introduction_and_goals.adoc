@@ -1,0 +1,82 @@
+[[section-introduction-and-goals]]
+==	Einführung und Ziele
+
+[role="arc42help"]
+
+Das Projekt "EnergieSammler" zielt darauf ab, Jugendliche für einen bewussten Energiekonsum zu sensibilisieren. Dies erfolgt durch ein interaktives Jump'n'Run-Spiel, das sowohl Wissen als auch Handlungskompetenz im Bereich Energieverbrauch vermittelt.
+
+=== Aufgabenstellung
+
+==== Was ist EnergieSammler
+"EnergieSammler" ist ein interaktives Jump'n'Run-Spiel, entwickelt für den Raspberry Pi, das Jugendliche zum bewussten Energiekonsum anregen soll. Es kombiniert spielerische Elemente mit Lerninhalten über Energieeffizienz und Umweltschutz. Die wichtigsten Anforderungen umfassen die Entwicklung einer benutzerfreundlichen, stabilen und effizienten Spielumgebung, die auch ohne ständige Internetverbindung funktioniert und die Möglichkeit bietet, Spielstände sicher zu erfassen und zu verwalten.
+
+==== Wesentliche Anforderungen und treibende Kräfte
+Geschäftsziele: Sensibilisierung für Energieverbrauch bei Jugendlichen.
+Aufgabenstellungen: Entwicklung eines interaktiven Jump'n'Run Spiels, das Wissen und Kompetenzen vermittelt.
+Funktionale Anforderungen: Unterhaltsames und lehrreiches Gameplay, korrekte Erfassung von Spielständen, Interaktion mit einer Datei für die Integration von mehreren Sprachen.
+Qualitätsziele: Hohe Funktionalität, Zuverlässigkeit, Effizienz, Benutzerfreundlichkeit, Wartbarkeit und Übertragbarkeit.
+Stakeholder: Entwicklerteam 7, Projektowner Andreas Vogt, Primeo Energie AG, FHNW.
+
+Verweis auf Anforderungsdokumente: link:https://fhnw-projecttrack.atlassian.net/wiki/spaces/IP1223vt7/pages/63901344/Produktvision[Produktvision]
+
+=== Qualitätsziele
+
+[options="header", cols="1,4"]
+|===
+| Qualitätsziel | Beschreibung
+
+| Wartbarkeit
+| Einfache Aktualisierung und Fehlerbehebung sind wichtig, um das Spiel langfristig attraktiv und funktional zu halten. Dies erleichtert die kontinuierliche Verbesserung und Anpassung an sich ändernde Anforderungen oder Nutzerfeedback.
+
+| Kompatibilität
+| Um eine breite Zugänglichkeit auf verschiedenen Endgeräten, insbesondere auf unterschiedlichen Raspberry Pi-Modellen, zu gewährleisten, ist Kompatibilität ein zentrales Qualitätsziel. Die Verwendung von Java trägt zur plattformübergreifenden Kompatibilität bei und ermöglicht eine einfache Portierung des Spiels auf verschiedene Hardware-Konfigurationen.
+
+| Funktionale Eignung
+| Das Spiel soll mehrere gängigen Funktionen für Jump n Run Spiele bieten, die nahtlos und effizient funktionieren. Dazu gehören nicht nur die grundlegenden Bewegungsmechaniken, sondern auch verschiedene interaktive Elemente, die das Spielerlebnis bereichern. Dies gewährleistet, dass das Spiel technisch solide und benutzerfreundlich ist.
+
+| Effizienz
+| Um auf dem Raspberry Pi eine gute Performance zu gewährleisten, ist Effizienz in der Ressourcennutzung und schnelle Reaktionszeiten notwendig. Dies trägt zu einem flüssigen Spielerlebnis bei, auch bei begrenzter Hardwareleistung.
+
+| Zuverlässigkeit
+| Das Spiel soll stabil und konsistent ohne Unterbrechungen oder Fehler laufen. Es ist wichtig, dass das Spiel auch unter verschiedenen Bedingungen und über längere Zeit hinweg seine Funktionalität bewahrt. Dies schliesst die Fähigkeit ein, mit unerwarteten Benutzereingaben umzugehen.
+
+| Usability
+| Das Ziel ist, ein Spiel zu entwickeln, das leicht zu erlernen und zu bedienen ist, wobei die Steuerung intuitiv und die Benutzeroberfläche klar strukturiert ist. Das Spiel sollte so gestaltet sein, dass Spieler unabhängig von ihrer Vorerfahrung mit ähnlichen Spielen effektiv interagieren können.
+
+| Lernförderung
+| Das Spiel soll Jugendlichen auf spielerische Weise Wissen über Energieressourcen, den alltäglichen Energieverbrauch und die damit verbundenen globalen Herausforderungen vermitteln. Die Integration interaktiver Lernelemente trägt zur Bewusstseinsbildung und Förderung eines nachhaltigen Umgangs mit Energie bei.
+|===
+
+=== Stakeholder
+
+[options="header"]
+|===
+| Rolle | Erwartungshaltung
+
+| Entwicklungsteam
+a|
+ - Verantwortlich für die technische Umsetzung des Projekts.
+ - Benötigt klare Anweisungen und Richtlinien für Entwicklung und Wartung.
+ - Interessiert an agilen Entwicklungsmethoden und effizienter Codebasis.
+
+| Projektowner (Andreas Vogt)
+a|
+- Effiziente Umsetzung der Geschäftsziele.
+- Kommunikation zwischen Entwicklungsteam und Primeo Energie AG
+
+| Auftraggeber (Primeo Energie AG)
+a|
+- Sicherstellung, dass das Spiel die Zielgruppe erreicht und anspricht.
+- Die Applikation soll wie in den Anforderungen gewünscht laufen
+
+| Sponsor (FHNW)
+a|
+- Bietet technische Unterstützung und Ressourcen für das Projekt.
+
+| Zielgruppe (Jugendliche)
+a|
+- An einem unterhaltsamen und lehrreichen Spielerlebnis interessiert.
+- Erwartet intuitive Bedienbarkeit und ansprechendes Design.
+- Feedback der Endnutzer könnte für zukünftige Updates und Verbesserungen wichtig sein.
+|===
+

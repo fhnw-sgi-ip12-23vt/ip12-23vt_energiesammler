@@ -1,0 +1,14 @@
+== Test F_13
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/F_13_TutorialDurchführung.adoc[]
+
+*Status:* Erfolgreich
+
+*Bemerkungen:* Es fehlen noch Spiel Anweisungen, im Moment sind nur Anweisungen um weiter oder zurück zu gehen.

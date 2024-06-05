@@ -1,0 +1,14 @@
+TC F.3: Energie sammeln
+
+*Beschreibung:* Überprüfung, ob der Spieler Energie durch Berührung mit Energiequellen im Spiel sammeln kann.
+
+*Annahmen und Voraussetzungen:* Energiequellen sind im Level verteilt. Die Spielfigur hat nicht die maximale Energie eingesammelt.
+
+*Testdaten:* Positionen der Energiequellen im Spiel.
+
+*Auszuführende Schritte:*
+
+ . Bewege die Spielfigur zu einer Energiequelle.
+ . Berühre die Energiequelle.
+
+*Erwartetes Ergebnis:* Die Energieanzeige (Oben links Batterie) der Spielfigur erhöht sich entsprechend der aufgesammelten Energie.

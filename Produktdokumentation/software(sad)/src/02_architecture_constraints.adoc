@@ -1,0 +1,83 @@
+[[section-architecture-constraints]]
+== Randbedingungen
+
+=== Technische Einschränkungen
+
+[options="header", cols="2,3"]
+|===
+|Randbedingung |Erläuterungen, Hintergrund
+
+| Material Gehäuse
+| Einsatz von Holz, um einen stabilen Arcade Automaten zu erstellen.
+Bereitgestellt durch das Projekt-Budget der FHNW.
+
+| Material 3D-Drucker
+| Nutzung nur von Materialien, die im Maker Studio 3D-Drucker der FHNW verfügbar sind.
+
+|Betrieb auf Raspberry Pi 4
+| Standardausstattung der FHNW für Projekt 1&2 zum Zeitpunkt.
+Minimale RAM Anforderung ist 8GB.
+
+|Unterstützung mehrerer Sprachen
+|Integration einer Datei für mehrsprachige Unterstützung, um eine breitere Zielgruppe anzusprechen und kulturelle Vielfalt zu fördern.
+
+|Implementierung in Java mittels Processing
+| Entwicklung unter Version Java SE 17 mittels der der Library link:https://processing.github.io/processing-javadocs/core/processing/core/PApplet.html[processing.core.PApple]
+
+|Programm
+| Der Code muss auf Java geschrieben sein und flüssig (30fps) auf dem Raspberry Pi 4 laufen.
+
+|===
+
+=== Organisatorische Einschränkungen
+
+[options="header", cols="1,2"]
+|===
+|Randbedingung |Erläuterungen, Hintergrund
+
+| Spielinterne Ideen
+| Begrenzt durch Vorgaben der FHNW und Primeo.
+
+|Entwicklerteam
+|Zusammensetzung aus Informatik Studenten im ersten Semester der FHNW, unterstützt durch Kollegen, Dozenten und Interessierte aus der FHNW Umgebung.
+
+|Zeitplan
+| Beginn der Entwicklung September 2023, erster lauffähiger Prototyp November 2023.
+Festgelegte Meilensteine für die Entwicklung, Prototyping und Veröffentlichung, um die Fortschritte zu strukturieren und zu überwachen.
+Die Fertigstellung des Produkts ist am 12.06.2024 bei der Projekt-Ausstellung.
+
+|Vorgehensmodell
+| Entwicklung risikogetrieben, iterativ und inkrementell. Zur Dokumentation der Architektur kommt arc42 zum Einsatz. Eine Architekturdokumentation gegliedert nach dieser Vorlage ist zentrales Projektergebnis.
+
+|Entwicklungswerkzeuge
+|Arbeitsergebnisse zur Architekturdokumentation gesammelt im Confluence Wiki.
+Erstellung der Java-Quelltexte in IntellJ.
+
+|Versionsverwaltung
+|Einsatz von Versionsverwaltungssystem Gitlab, um eine effiziente Kollaboration und Codeverwaltung innerhalb des Teams zu ermöglichen.
+
+| Testwerkzeuge und -prozesse
+Verwendung von RealVNC Viewer für das manuelle (BlackBox) Testing in der Anfangsphase des Programs auf dem Raspberry Pi.
+JUnit im Annotationsstil sowohl für inhaltliche Richtigkeit als auch für Integrationstests und die Einhaltung von Effizienzvorgaben
+
+|===
+
+=== Konventionen
+
+[options="header", cols="1,2"]
+|===
+|Konvention |Erläuterungen, Hintergrund
+
+|Architekturdokumentation
+|Nutzung des arc42-Templates, um eine konsistente und klare Struktur in der Dokumentation zu gewährleisten.
+
+|Kodierrichtlinien für Java*
+|Festlegung und Einhaltung spezifischer Kodierrichtlinien, um Code-Qualität und Wartbarkeit zu sichern.
+
+|Sprache
+|Mehrsprachige Unterstützung in der Benutzeroberfläche des Programms, um die Schweizerische mehrsprachige Verwendbarkeit zu erhöhen.
+
+|===
+
+Dokumentverweise:
+link:https://fhnw-projecttrack.atlassian.net/wiki/spaces/IP1223vt/pages/27132507/Source+Code+SC+DEV[CodeConventions]

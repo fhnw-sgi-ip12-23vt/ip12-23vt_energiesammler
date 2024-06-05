@@ -1,0 +1,13 @@
+TC F.7: Spiel pausieren
+
+*Beschreibung:* Dieser Testfall prüft, ob das Spiel jederzeit pausiert werden kann und ob das Pausenmenü korrekt angezeigt wird.
+
+*Annahmen und Voraussetzungen:* Das Spiel läuft und der Spieler ist im aktiven Spielgeschehen.
+
+*Testdaten:* Eingabebefehl zum Pausieren des Spiels (z.B. Drücken der "Enter"-Taste oder Blauer Button).
+
+*Auszuführende Schritte:*
+
+. Drücke während des aktiven Spiels den definierten Pausenknopf.
+
+*Erwartetes Ergebnis:* Das Spiel wird zeitnah pausiert, und alle Spielaktionen kommen zum Stillstand. Das Pausenmenü erscheint auf dem Bildschirm und bietet Optionen wie „Fortsetzen“ und „Hauptmenü“, deren Beschriftungen je nach eingestellter Sprache variieren können. Durch Auswahl dieser Optionen kann der Spieler den aktuellen Spielzustand entsprechend ändern.

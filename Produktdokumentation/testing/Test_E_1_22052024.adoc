@@ -1,0 +1,14 @@
+== Test E_1
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/E_1_FlüssigesSpiel.adoc[]
+
+*Status:* Erfolgreich
+
+*Bemerkungen:* Das Spiel ist flüssig mit einem 5 Sekunden Intervall zwischen 28 und 29.999 FPS

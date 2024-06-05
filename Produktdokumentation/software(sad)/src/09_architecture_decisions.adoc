@@ -1,0 +1,54 @@
+[[section-design-decisions]]
+== Architekturentscheidungen
+
+Folgende Entscheidungen wurden für das Projekt ausgewählt und der Hintergrundgedanken dokumentiert.
+
+=== GUI-Bibliothek
+
+[options="header"]
+|===
+| Kriterium | processing.core.PApplet | JavaFX
+
+| Einfachheit und Zugänglichkeit
+| Einfache Programmierung mittels Jump n Run Template
+| Möglicherweise komplexer, aber flexibler
+
+| Performance
+| Geschätzt bessere Performance
+| Gehört, dass Performance zu Probleme führen kann
+
+| Projektspezifische Anforderungen
+| Gute Eignung für "EnergieSammler"-Projektanforderungen
+| Muss evaluiert werden
+|===
+
+Durch diese Kriterien wurde die Wahl auf die GUI-Bibliothek processing.core.PApplet getroffen.
+
+=== Mehrsprachigkeit
+
+[options="header"]
+|===
+| Kriterium | .properties-Dateien | Excel-Datei | Hardcoded Strings
+
+| Unterstützung in Java
+| Native Unterstützung; Standard in Java-Umgebungen
+| Erfordert zusätzliche Bibliotheken zur Verarbeitung
+| Direkte Unterstützung
+
+| Wartbarkeit und Skalierbarkeit
+| Hoch; einfache Aktualisierung und Erweiterung
+| Weniger wartbar; Änderungen können komplex sein
+| Sehr gering; Änderungen erfordern Code-Änderungen
+
+| Performance
+| Schnelle Ladezeiten und geringer Speicherbedarf
+| Kann langsam sein, insbesondere bei großen Dateien
+| Schnell, da direkt im Code eingebettet, aber erhöht den Speicherbedarf
+
+| Zugänglichkeit für Nicht-Entwickler
+| Einfach zu bearbeiten mit Texteditoren
+| Vertraute Benutzeroberfläche für viele Nutzer
+| Erfordert Verständnis des Quellcodes für Änderungen
+|===
+
+Aufgrund der einfachen Integration in Java, hervorragenden Wartbarkeit und ausgezeichneten Flexibilität für Mehrsprachigkeit sind .properties-Dateien die optimale Wahl für die Internationalisierung Ihres Java-Projekts.

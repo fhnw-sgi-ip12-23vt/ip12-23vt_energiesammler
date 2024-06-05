@@ -1,0 +1,14 @@
+== Test F_8
+
+[%autowidth]
+|===
+|Datum | 22.05.2024
+|Verantwortlich | Andro Pavlovic
+|Tester/in | Samuel Lenzin
+|===
+
+include::TestCases/F_8_TürAufgabenAuswahl.adoc[]
+
+*Status:* Erfolgreich
+
+*Bemerkungen:*

@@ -1,0 +1,14 @@
+TC F.5: Energieverlust durch Energieverbraucher
+
+*Beschreibung:* Dieser Testfall soll überprüfen, ob die Spielfigur die gesammelte Energie verliert, wenn sie einen Energieverbraucher berührt.
+
+*Annahmen und Voraussetzungen:* Die Spielfigur hat bereits Energie gesammelt. Energieverbraucher sind im Level präsent.
+
+*Testdaten:* Anzahl der gesammelten Energieeinheiten und Position des Energieverbrauchers.
+
+*Auszuführende Schritte:*
+
+ . Bewege die Spielfigur zu einem Energieverbraucher.
+ . Berühre den Energieverbraucher seitlich (Ohne auf diesen zu springen).
+
+*Erwartetes Ergebnis:* Die Energieanzeige der Spielfigur verringert sich auf je nach definierten Wert des Energieverbrauchers.
