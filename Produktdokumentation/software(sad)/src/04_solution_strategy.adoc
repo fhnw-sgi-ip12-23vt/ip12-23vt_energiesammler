@@ -22,7 +22,7 @@ Benutzererfahrung: ::
 Priorisierung der Benutzererfahrung durch Designentscheidungen, die die Zugänglichkeit und das Engagement eines lernreichendes Arcade Spiels fördern, insbesondere für die junge Zielgruppe.
 
 Teststrategien: ::
-Implementierung genauer Unit-Tests, um eine hohe Qualität und Zuverlässigkeit des Spiels sicherzustellen, speziell in Bezug auf Benutzerinteraktion und Spiellogik.
+Implementierung verschiedener Unit-Tests, um die wichtigsten Funktionen zu testen und ihre zuverlässigkeit zu vergewissern, speziell in Bezug auf Benutzerinteraktion und Spiellogik.
 
 Skalierbarkeit: ::
 Vorbereitung des Systems für zukünftige Erweiterungen, beispielsweise durch zusätzliche Level, Funktionen oder Benutzeroberfläche, ohne die Grundstruktur des Spiels zu beeinträchtigen.
@@ -35,4 +35,4 @@ Wissensaustausch und Fortbildung: ::
 Förderung des Wissensaustauschs innerhalb des Teams und regelmässige Fortbildungen, um mit den neuesten technologischen Entwicklungen Schritt zu halten.
 
 Ideen-Einbindung: ::
-Einbeziehung der Zielgruppe- und Energie AG in den Entwicklungsprozess, um Feedback zu sammeln und die Erfolgsfaktor des Spiels zu erhöhen.
+Einbeziehung der Zielgruppe- und Primeo in den Entwicklungsprozess, um Feedback zu sammeln und die Erfolgsfaktor des Spiels zu erhöhen.

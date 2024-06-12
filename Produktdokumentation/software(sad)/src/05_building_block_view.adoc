@@ -99,7 +99,5 @@ Stellt die einzelnen Elemente des Spiels auf dem Bildschirm dar.
 
 image:Ebene-3.png[Ebene 3. EnergieSammler]
 
-TODO: Ausführliche Beschreibung von wichtigen Methoden wie in den vorherigen Ebenen mit jeweils Klassendiagramm der einzelnen beschreibende Klasse
-
 ==== Whitebox GameStateBase
 Dient als Vorlage für die Zustände des Spiels für das bereitmachen der Anzeige, das Zeichnen der Elemente und das Auswerten der Eingaben.

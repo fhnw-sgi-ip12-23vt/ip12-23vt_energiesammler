@@ -42,7 +42,7 @@ Optionale Anbindung an externe Ressourcen wie Mehrsprachigkeit oder Online-Daten
 
 .Hardware (Raspberry Pi)
 - Kanal: Physische Konsole.
-- Technische Schnittstelle: Joystick, Knöpfe, Bildschirm.
+- Technische Schnittstelle: Joystick, Buttons, Bildschirm.
 
 .Mehrsprachigkeit (Text- oder Exceldateien)
 - Kanal: Interne Dateisysteme.

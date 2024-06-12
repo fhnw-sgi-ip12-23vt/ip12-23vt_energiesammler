@@ -1,8 +1,6 @@
 [[section-concepts]]
 == Querschnittliche Konzepte
 
-TODO: Die Konzepte in der Entwicklung und Architektur detailiert dokumentieren.
-
 === Anpassbarkeit
 
 Da Strompreise und der Verbrauch von verschiedenen elektronischen Geräten mit der Zeit immer anders wird ist es nötig dass dies angepasst werden kann um ein reales Bild darstellen zu können. Weiterhin kann das Interesse an "Energiesammler" besser aufrecht erhalten werden wenn Änderungen an den Levels vorgenommen und auch neue Sprachen hinzugefügt werden können.
@@ -19,8 +17,8 @@ Das Spiel soll flüssig laufen um einen angenehmen Spielablauf zu gewährleisten
 
 Umsetzung:
 
-* Das Laden von Bildern wurde minimiert um weniger Leistung aufzuwenden beim Zeichnen der Spieloberfläche.
-* Die Auflösung des Raspberry Pi wurde verringert wodurch das Spiel flüssig läuft auch wenn viele Elemente angezeigt werden.
+* Das Laden von Bildern wurde auf den Start des Spiels minimiert um weniger Leistung aufzuwenden beim Zeichnen der Spieloberfläche.
+* Die Auflösung des Raspberry Pi wurde auf 720x480 verringert wodurch das Spiel flüssig läuft auch wenn viele Elemente angezeigt werden.
 
 === Benutzerschnittstelle
 

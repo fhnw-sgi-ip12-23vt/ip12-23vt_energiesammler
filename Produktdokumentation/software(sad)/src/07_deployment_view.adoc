@@ -24,9 +24,6 @@ Anbindung an Datenbank für Datenspeicherung und Verteilung. z.B. für Konfigura
 * Die Ausgabe der Benutzeroberfläche wird über den angeschlossenen Monitor dargestellt.
 ** Port: HDMI
 * Die Eingabe erfolgt mittels JoyStick und 2 Buttons (Knöpfe/Tasten).
-** Port USB-Typ-A. Alternative: GPIO
+** Port GPIO
 * Die Administrative Spiel-Konfiguration erfolgt mittels Tastatur und Maus.
 ** Port USB-Typ-A
-
-==== Offene Punkte
-* Hardware-Anforderungen: Spezifikation der minimalen und empfohlenen Hardware-Anforderungen für eine optimale Spielerfahrung.
