@@ -1,0 +1,14 @@
+<!DOCTYPE suppressions PUBLIC
+        "-//Puppy Crawl//DTD Suppressions 1.2//EN"
+        "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<!--
+Java Docs müssen noch geschrieben werden vor der Abgabe am 12.06
+-->
+<suppressions>
+    <suppress checks="JavadocType"/>
+    <suppress checks="JavadocMethod"/>
+    <suppress checks="JavadocVariable"/>
+    <suppress checks="JavadocPackage"/>
+    <suppress checks="SummaryJavadoc"/>
+</suppressions>

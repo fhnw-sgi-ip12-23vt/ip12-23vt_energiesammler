@@ -1,0 +1,18 @@
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+
+# Compiled output
+out/
+target/
+
+# Other common ignores
+.classpath
+.project
+.settings/
+*.swp
+src/main/javadoc/
+*.DS_Store
