@@ -56,7 +56,7 @@ public class LanguageSelection extends GameStateBase {
       currentLanguagePointer =
           currentLanguagePointer < languageCodeList.size() - 1 ? currentLanguagePointer + 1 : 0;
     }
-    if (inputManager.pressed(GameCommand.BUTTON_B)) {
+    if (inputManager.pressed(GameCommand.BUTTON_B) || inputManager.pressed(GameCommand.BUTTON_A)) {
       platformer.setGameLanguage(languageCodeList.get(currentLanguagePointer));
       platformer.gameScreenSetup();
       platformer.gameState = new HomeScreen(platformer, inputManager, level);

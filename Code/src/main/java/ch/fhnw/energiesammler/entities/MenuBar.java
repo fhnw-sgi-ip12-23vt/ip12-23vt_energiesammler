@@ -1,7 +1,5 @@
 package ch.fhnw.energiesammler.entities;
 
-import ch.fhnw.energiesammler.gamelogic.Pictures;
-
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -9,7 +7,6 @@ import processing.core.PImage;
  * Class for the Menu Bars in the Home Screen.
  */
 public class MenuBar extends Sprite {
-  Pictures pictures = new Pictures(pApplet);
   PImage choose;
   PImage unchoose;
 

@@ -146,7 +146,7 @@ public class Level {
             getPlatforms().add(w);
           }
           //Gegner von Sorte Ofen erstellen
-          case "5" -> {
+          case "O" -> {
             String name = "oven";
             Enemy ovens = new Enemy(pApplet, platformer, this, oven, energyScale * 1.5f,
                 AppConfig.getValue("dmg." + name, -3.0f), AppConfig.getValue("speed." + name, 1.0f), name);
@@ -155,7 +155,7 @@ public class Level {
             enemies.add(ovens);
           }
           //Gegner von Sorte Mixer erstellen
-          case "6" -> {
+          case "M" -> {
             String name = "mixer";
             Enemy mixers = new Enemy(pApplet, platformer, this, mixer, energyScale,
                 AppConfig.getValue("dmg." + name, -0.5f), AppConfig.getValue("speed." + name, 2.0f), name);
@@ -164,7 +164,7 @@ public class Level {
             enemies.add(mixers);
           }
           //Gegner von Sorte Glühbirne erstellen
-          case "7" -> {
+          case "B" -> {
             String name = "bulb";
             Enemy bulbs = new Enemy(pApplet, platformer, this, mixer, energyScale / 1.5f,
                     AppConfig.getValue("dmg." + name, -0.008f), AppConfig.getValue("speed." + name, 3.0f), name);
@@ -173,14 +173,14 @@ public class Level {
             enemies.add(bulbs);
           }
           //Haus erstellen
-          case "8" -> {
+          case "h" -> {
             Sprite houses = new Sprite(pApplet, house, blockScale);
             houses.center_x = spriteSize / 2 + col * spriteSize;
             houses.center_y = platformer.displayHeight - (spriteSize + houses.getH() / 2);
             allHouses.add(houses);
           }
           //Türe erstellen
-          case "9" -> {
+          case "d" -> {
             if (taskIterator.hasNext()) {
               Map.Entry<String, Float> taskEntry = taskIterator.next();
               Door doorLevel =
@@ -200,7 +200,7 @@ public class Level {
             batteries.add(battery);
           }
           //Energiequelle erstellen
-          case "4" -> {
+          case "l" -> {
             EnergySource e =
                 new EnergySource(pApplet, ground, energyScale, AppConfig.getValue("energy.lightning", 1.0f), "lightning.png");
             e.center_x = spriteSize / 2 + col * spriteSize;

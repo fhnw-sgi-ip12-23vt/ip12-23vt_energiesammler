@@ -45,14 +45,18 @@ public class GameLogic {
     this.drawer = drawer;
     this.player = platformer.getPlayer();
 
-    numberOfMaps = AppConfig.getValue("level.number", 3);
-    collectedEnergy = 3;
     isGameOver = false;
-    batterySize = 6;
-    collectedBatteries = 1;
-    maxEnergy = collectedBatteries * batterySize;
     usedDoors = new ArrayList<>();
     allDoors = new ArrayList<>();
+    numberOfMaps = AppConfig.getValue("level.number", 3);
+    collectedEnergy = AppConfig.getValue("battery.startFill", 1);
+    batterySize = AppConfig.getValue("battery.size", 2);
+    collectedBatteries = AppConfig.getValue("energy.startBatteries", 1);
+    maxEnergy = collectedBatteries * batterySize;
+
+    for (int i = 1; i < collectedBatteries; i++) {
+      drawer.getDisplayer().addBattery();
+    }
   }
 
   public void initGameValues() {
@@ -78,10 +82,8 @@ public class GameLogic {
   }
 
   public void scroll() {
-    if (platformer.view_x + platformer.displayWidth
-        < level.getLevelRight() - level.getSpriteSize() / 2) {
-      float rightBoundary =
-          platformer.view_x + platformer.displayWidth - ((float) platformer.displayWidth / 4);
+    if (platformer.view_x + platformer.displayWidth < level.getLevelRight() - level.getSpriteSize() / 2) {
+      float rightBoundary = platformer.view_x + platformer.displayWidth - ((float) platformer.displayWidth / 4);
       if (platformer.getPlayer().getRight() > rightBoundary) {
         platformer.view_x += platformer.getPlayer().getRight() - rightBoundary;
       }
@@ -92,12 +94,13 @@ public class GameLogic {
         platformer.view_x -= leftBoundary - platformer.getPlayer().getLeft();
       }
     }
-    if (platformer.view_y + platformer.displayHeight + Math.abs(player.change_y)
-        < level.getLevelLow() - level.getSpriteSize() / 2) {
-      float bottomBoundary =
-          platformer.view_y + platformer.displayHeight - (float) platformer.displayHeight / 10;
+    if (platformer.view_y + platformer.displayHeight < level.getLevelLow() - level.getSpriteSize() / 2) {
+      float bottomBoundary = platformer.view_y + platformer.displayHeight - (float) platformer.displayHeight / 10;
       if (platformer.getPlayer().getBottom() > bottomBoundary) {
         platformer.view_y += platformer.getPlayer().getBottom() - bottomBoundary;
+      } else {
+        // set BottomBoundary limit to not go lower, breaking the level view Y
+        platformer.view_y = -(platformer.displayHeight - level.levelLow);
       }
     }
     float topBoundary = platformer.view_y + (float) platformer.displayHeight / 10;

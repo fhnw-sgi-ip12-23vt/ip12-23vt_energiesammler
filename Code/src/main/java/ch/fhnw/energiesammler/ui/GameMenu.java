@@ -159,14 +159,8 @@ public class GameMenu {
     platformer.text(textLocale.getText("balance"), platformer.displayWidth / 2f,
         platformer.displayHeight / 8f);
 
-    //Button
-    pApplet.fill(0, 0, 255);
-    pApplet.circle(pApplet.displayWidth - 200, pApplet.displayHeight - 100, 40);
-    pApplet.fill(0);
-    platformer.textSize(textSmall);
-    platformer.textAlign(PConstants.LEFT, PConstants.CENTER);
-    platformer.text(textLocale.getText("next"), pApplet.displayWidth - 170,
-        pApplet.displayHeight - 105);
+    //Button Info
+    buttonBlueInfo();
 
     platformer.textSize(textSmall);
     platformer.textAlign(PApplet.LEFT, PApplet.TOP);
@@ -193,19 +187,29 @@ public class GameMenu {
 
             if (!platformer.getUsedDoors().isEmpty() && platformer.getUsedDoors().size() >= row + 1) {
               if (platformer.getUsedDoors().contains(door)) {
-                platformer.fill(0, 255, 0); // Grün
+                platformer.fill(0); // Schwarz
               } else {
-                platformer.fill(255, 0, 0); // Rot
+                platformer.fill(150, 150, 150); // Grau
               }
 
               float yOffset = drawWrappedText(door.getText(), x, y, charPerLine);
+              // Türen Kosten Farben definieren
+              Door sameColDoor = col == 0 ? platformer.getAllDoors().get(i + 1) : platformer.getAllDoors().get(i - 1);
+              if (door.getCost() < sameColDoor.getCost()) {
+                platformer.fill(0, 255, 0); // Grün
+              } else if (door.getCost() > sameColDoor.getCost()) {
+                platformer.fill(255, 0, 0); // Rot
+              } else {
+                platformer.fill(0); // Schwarz
+              }
+
               platformer.text(door.getCost() + " kWh", x + colMiddleWidthSpace / 3, y + yOffset);
 
               if (yOffset > maxRowHeight) {
                 maxRowHeight = yOffset;
               }
             } else {
-              platformer.fill(0);
+              platformer.fill(0); // Schwarz
               platformer.text("???", x, y);
             }
           }
@@ -227,24 +231,8 @@ public class GameMenu {
     drawWrappedText(emLocale.getText("em1"), platformer.displayWidth / 2f,
         platformer.displayHeight / 8f + 150, 35);
 
-
-    //Buttons
-    pApplet.fill(0, 255, 0);
-    pApplet.circle(pApplet.displayWidth - 200, pApplet.displayHeight - 50, 40);
-    pApplet.fill(0);
-    platformer.textSize(textSmall);
-    platformer.textAlign(PConstants.LEFT, PConstants.CENTER);
-    platformer.text(textLocale.getText("back"), pApplet.displayWidth - 170,
-        pApplet.displayHeight - 55);
-
-    pApplet.fill(0, 0, 255);
-    pApplet.circle(pApplet.displayWidth - 200, pApplet.displayHeight - 100, 40);
-    pApplet.fill(0);
-    platformer.textSize(textSmall);
-    platformer.textAlign(PConstants.LEFT, PConstants.CENTER);
-    platformer.text(textLocale.getText("next"), pApplet.displayWidth - 170,
-        pApplet.displayHeight - 105);
-    platformer.textSize(textMid);
+    //Button Info
+    showBothButtons();
 
     platformer.textSize(textSmall);
     platformer.textAlign(3);
@@ -288,23 +276,8 @@ public class GameMenu {
     platformer.text(textLocale.getText("highScore"), platformer.displayWidth / 2f,
         platformer.displayHeight / 8f);
 
-    //Buttons
-    pApplet.fill(0, 255, 0);
-    pApplet.circle(pApplet.displayWidth - 200, pApplet.displayHeight - 50, 40);
-    pApplet.fill(0);
-    platformer.textSize(textSmall);
-    platformer.textAlign(PConstants.LEFT, PConstants.CENTER);
-    platformer.text(textLocale.getText("back"), pApplet.displayWidth - 170,
-        pApplet.displayHeight - 55);
-
-    pApplet.fill(0, 0, 255);
-    pApplet.circle(pApplet.displayWidth - 200, pApplet.displayHeight - 100, 40);
-    pApplet.fill(0);
-    platformer.textSize(textSmall);
-    platformer.textAlign(PConstants.LEFT, PConstants.CENTER);
-    platformer.text(textLocale.getText("next"), pApplet.displayWidth - 170,
-        pApplet.displayHeight - 105);
-    platformer.textSize(textMid);
+    //Button Info
+    showBothButtons();
 
     platformer.textSize(textSmall);
     platformer.textAlign(3);
@@ -317,7 +290,7 @@ public class GameMenu {
     }
     bilanz += "-----------------------------------------------------------\n";
     bilanz += "                               "
-        + platformer.getDf().format(platformer.drawer.getDisplayer().highscore * 100) + " kWh";
+        + platformer.getDf().format(platformer.drawer.getDisplayer().highscore) + " kWh";
     platformer.text(bilanz, platformer.displayWidth / 2f, platformer.displayHeight / 4f);
 
     // Ziel Energie ausrechnen
@@ -327,17 +300,44 @@ public class GameMenu {
       platformer.getUpdater().collectedEnergy = 0;
     }
     String exitedTheLevelWith =
-        "+ " + platformer.getDf().format(platformer.getUpdater().collectedEnergy * 100) + " kWh\n";
+        "+ " + platformer.getDf().format(platformer.getUpdater().collectedEnergy) + " kWh\n";
     platformer.text(exitedTheLevelWith, platformer.displayWidth / 2f,
         (platformer.displayHeight / 2f) + 25);
 
     // End-Score ausrechnen
     String score = textLocale.getText("score") + " "
-        + platformer.getDf().format(platformer.getUpdater().collectedEnergy * 100
-            + platformer.drawer.getDisplayer().highscore * 100) + " kWh";
+        + platformer.getDf().format(platformer.getUpdater().collectedEnergy
+            + platformer.drawer.getDisplayer().highscore) + " kWh";
     platformer.textSize(textMid);
     platformer.text(score, platformer.displayWidth / 2f,
         platformer.displayHeight * 3f / 4 - 10);
+  }
+
+  private void showBothButtons() {
+    buttonBlueInfo();
+    buttonGreenInfo();
+  }
+
+  private void buttonBlueInfo() {
+    pApplet.fill(0, 0, 255);
+    pApplet.circle(pApplet.displayWidth - 200, pApplet.displayHeight - 100, 40);
+    pApplet.fill(0);
+    platformer.textSize(textSmall);
+    platformer.textAlign(PConstants.LEFT, PConstants.CENTER);
+    platformer.text(textLocale.getText("next"), pApplet.displayWidth - 170,
+            pApplet.displayHeight - 105);
+    platformer.textSize(textMid);
+  }
+
+  private void buttonGreenInfo() {
+    //Buttons
+    pApplet.fill(0, 255, 0);
+    pApplet.circle(pApplet.displayWidth - 200, pApplet.displayHeight - 50, 40);
+    pApplet.fill(0);
+    platformer.textSize(textSmall);
+    platformer.textAlign(PConstants.LEFT, PConstants.CENTER);
+    platformer.text(textLocale.getText("back"), pApplet.displayWidth - 170,
+            pApplet.displayHeight - 55);
   }
 
 

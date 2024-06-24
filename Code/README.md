@@ -101,14 +101,14 @@ Um das Spiel dauerhaft auf dem Raspy laufen zu lassen muss man folgenden Schritt
 ```shell
 ssh pi@pi4j.local
 ```
-Als passwort muss `pi4j` genutzt werden.
+Als Passwort muss `pi4j` genutzt werden.
 
 ```shell
 DISPLAY=:0 XAUTHORITY=/home/pi/.Xauthority sudo -b java -XX:+UseZGC -Xmx1G    --module-path /home/pi/deploy --module-path /home/pi/processing/processing/core/library:/home/pi/deploy --module ch.fhnw.energiesammler/ch.fhnw.energiesammler.JumpNRunApp -Dmonocle.cursor.enabled=false
 ```
 
 ## Einstellungen
-Um die variablen in den Angegeben Klassen zu finden empfielt sich die Suchfunktion mit `ctrl + F` 
+Um die Variablen in den angegeben Klassen zu finden empfielt sich die Suchfunktion mittels `ctrl + F` 
 
 ### Einstellungen im [pom.xml](pom.xml)
 Unter Properties:
@@ -133,9 +133,9 @@ Unter Properties:
   * Mixer: [app.properties](src/main/resources/app.properties) -> _speed.mixer_
   * Glühbirne: [app.properties](src/main/resources/app.properties) -> _speed.bulb_
 * Erscheindungsort: [Map1](src/main/resources/files/maps/map1.csv), [Map2](src/main/resources/files/maps/map2.csv), [Map3](src/main/resources/files/maps/map3.csv)
-  * Ofen: Setze eine `5`
-  * Mixer: Setze eine `6`
-  * Glühbirne: Setze eine `7`
+  * Ofen: Setze eine `O`
+  * Mixer: Setze eine `M`
+  * Glühbirne: Setze eine `B`
 * Bild: Im Package [resources/img/enemy](src/main/resources/img/enemy)
   * Ofen: die Bilder [oven_run1](src/main/resources/img/enemy/oven_run1.png), [oven_run2](src/main/resources/img/enemy/oven_run2.png), [oven_neutral1](src/main/resources/img/enemy/oven_neutral1.png)
   * Mixer: die Bilder [mixer_run1](src/main/resources/img/enemy/mixer_run1.png), [mixer_run2](src/main/resources/img/enemy/mixer_run2.png), [mixer_neutral1](src/main/resources/img/enemy/mixer_neutral1.png)
@@ -153,10 +153,10 @@ Unter Properties:
   * Batterieanzeige: [battery](src/main/resources/img/energySource/battery.png)
   * Batterie zum aufsammeln: [batteryCollect](src/main/resources/img/energySource/batteryCollect.png)
 * Erscheinungsort: [Map1](src/main/resources/files/maps/map1.csv), [Map2](src/main/resources/files/maps/map2.csv), [Map3](src/main/resources/files/maps/map3.csv)
-  * Blitz: Setze ein/e `4`
+  * Blitz: Setze ein/e `l`
   * Windmühle: Setze ein/e `w`
   * Sonnenkollektor: Setze ein/e `s`
-  * Batteri zum aufsammeln: Setze ein/e `b`
+  * Batterie zum aufsammeln: Setze ein/e `b`
 
 ### Aufgaben Einstellungen
   * Erweiterung der Aufgaben: In dem Package  [tasks](src/main/resources/tasks) müssen in allen Sprachen die Aufgaben erweitert weden.
@@ -166,19 +166,21 @@ Unter Properties:
 Erweiterung der Sprachen: In dem Package  [tasks](src/main/resources/tasks) müssen weitere Files mit dem Muster task_<sprache>.properties hinzugefügt werden.
 
 ### Level Einstellungen [Map1](src/main/resources/files/maps/map1.csv), [Map2](src/main/resources/files/maps/map2.csv), [Map3](src/main/resources/files/maps/map3.csv)
-Die Anzahl der Level ist Fix auf 3, jedoch  kann man die Levelgrösse ändern wie man will.
+Man kann nun Level löschen oder hinzufügen. Die einzige Bedingung ist, dass der Name der Map-Datei `mapX.csv` benennt wird. X ist dabei eine Zahl die der Zahlenfolge entspricht (Darf keine Unterbrüche von Zahlen geben).
+Eine Level wird anhand erlesener Chars gestaltet:
+Zum Merken: Blöcke sind Zahlen, Gegner grosse Chars, andere Entities kleine Chars.
 * Nichts: Ofen: Setze ein/e `0`
 * Dreckuntergrund: Ofen: Setze ein/e `1`
 * Holz vertikal: Ofen: Setze ein/e `2`
-* Haus: Setze ein/e `8`
-* Tür: Setze ein/e `9`
-* Blitz: Setze ein/e `4`
+* Haus: Setze ein/e `h`
+* Tür: Setze ein/e `d`
+* Blitz: Setze ein/e `l`
 * Windmühle: Setze ein/e `w`
 * Sonnenkollektor: Setze ein/e `s`
-* Batteri zum aufsammeln: Setze ein/e `b`
-* Ofen: Setze eine `5`
-* Mixer: Setze eine `6`
-* Glühbirne: Setze eine `7`
+* Batterie zum aufsammeln: Setze ein/e `b`
+* Ofen: Setze eine `O`
+* Mixer: Setze eine `M`
+* Glühbirne: Setze eine `B`
 
 ### Steuerung Einstellungen
 Um die Steuerung von Joystick, buttons oder Tastatur zu ändern, muss in dder Klasse [GameCommand](src/main/java/ch/fhnw/energiesammler/controls/GameCommand.java)

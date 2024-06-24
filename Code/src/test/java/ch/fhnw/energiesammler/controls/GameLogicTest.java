@@ -2,6 +2,7 @@ package ch.fhnw.energiesammler.controls;
 
 import java.util.ArrayList;
 
+import ch.fhnw.energiesammler.AppConfig;
 import ch.fhnw.energiesammler.entities.Door;
 import ch.fhnw.energiesammler.entities.Enemy;
 import ch.fhnw.energiesammler.entities.EnergySource;
@@ -60,43 +61,49 @@ class GameLogicTest {
     when(level.getEnergySources()).thenReturn(energyList);
     when(gameLogic.checkCollisionList(player, level.getEnergySources())).thenReturn(energyList);
 
+    // Before
+    assertEquals(AppConfig.getValue("battery.startFill", 1f), gameLogic.collectedEnergy);
+
     // Action
     gameLogic.collectEnergy();
 
     // Verify
-    assertEquals(6, gameLogic.collectedEnergy);
+    assertEquals(AppConfig.getValue("battery.size", 2f), gameLogic.collectedEnergy);
     assertTrue(gameLogic.displayLostWinEnergy);
   }
 
   @Test
   void testReduceEnergy() {
-    assertEquals(3, gameLogic.collectedEnergy);
+    float batteryFill = AppConfig.getValue("battery.startFill", 1f);
+    assertEquals(batteryFill, gameLogic.collectedEnergy);
 
-    gameLogic.reduceEnergy(1);
-    assertEquals(2, gameLogic.collectedEnergy);
+    gameLogic.reduceEnergy(0.5f);
+    batteryFill = batteryFill - 0.5f;
+    assertEquals(batteryFill, gameLogic.collectedEnergy);
 
-    gameLogic.reduceEnergy(1);
-    assertEquals(1, gameLogic.collectedEnergy);
+    gameLogic.reduceEnergy(0.25f);
+    batteryFill = batteryFill - 0.25f;
+    assertEquals(batteryFill, gameLogic.collectedEnergy);
   }
 
   @Test
   void testNoNegativeEnergy() {
-    assertEquals(3, gameLogic.collectedEnergy);
+    assertEquals(AppConfig.getValue("battery.startFill", 1f), gameLogic.collectedEnergy);
 
     // Energie auf 0 reduzieren
-    gameLogic.reduceEnergy(3);
+    gameLogic.reduceEnergy(AppConfig.getValue("battery.startFill", 1f));
 
     // Verify
     assertEquals(0, gameLogic.collectedEnergy);
 
     // Energie weiter reduzieren und sicherstellen, dass sie nicht negativ wird
-    gameLogic.reduceEnergy(5);
+    gameLogic.reduceEnergy(2f);
     assertEquals(0, gameLogic.collectedEnergy);
   }
 
   @Test
   void testMaxEnergy() {
-    assertEquals(6, gameLogic.maxEnergy);
+    assertEquals(AppConfig.getValue("battery.size", 2f), gameLogic.maxEnergy);
 
     EnergySource energySource = new EnergySource(pApplet, new PImage(), 1.0f, 30, "lightning.png");
     ArrayList<Sprite> energyList = new ArrayList<>();
@@ -109,14 +116,14 @@ class GameLogicTest {
     gameLogic.collectEnergy();
 
     // Verify
-    assertEquals(6, gameLogic.collectedEnergy);
+    assertEquals(AppConfig.getValue("battery.size", 2f), gameLogic.collectedEnergy);
 
-    gameLogic.maxEnergy = 12;
-    assertEquals(6, gameLogic.collectedEnergy);
+    gameLogic.maxEnergy = 6;
+    assertEquals(AppConfig.getValue("battery.size", 2f), gameLogic.collectedEnergy);
 
     energyList.add(energySource);
     gameLogic.collectEnergy();
-    assertEquals(12, gameLogic.collectedEnergy);
+    assertEquals(6, gameLogic.collectedEnergy);
   }
 
   // Test Game Over and Game Start

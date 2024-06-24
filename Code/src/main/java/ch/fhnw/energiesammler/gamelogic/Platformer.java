@@ -3,6 +3,7 @@ package ch.fhnw.energiesammler.gamelogic;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import ch.fhnw.energiesammler.AppConfig;
@@ -81,13 +82,13 @@ public class Platformer extends PApplet {
    */
   @Override
   public void setup() {
-    gameLanguage = "de";
+    gameLanguage = AppConfig.getValue("startLanguage", "de");
     textLocale = new TextLocale(gameLanguage);
     textEmLocale = new TextEmLocale(gameLanguage);
 
     pixelFont = createFont(ImageLoader.loadFile("fonts/pixel.ttf"), 20);
     textFont(pixelFont);
-    pictures = new Pictures(this);
+    pictures = new Pictures(this, gameLanguage);
     pictures.menuBackground.resize(displayWidth, displayHeight);
     pictures.backgroundCharacterauswahl.resize(displayWidth, displayHeight);
 
@@ -167,15 +168,14 @@ public class Platformer extends PApplet {
       charGender = "female";
     }
 
-    enemiesTurnedOff.put(
-        new Enemy(this, this, this.level, pictures.bulb, this.level.energyScale * 1.5f, -0.008f, 1f,
-            "bulb", 0, 0), 0);
-    enemiesTurnedOff.put(
-        new Enemy(this, this, this.level, pictures.mixer, this.level.energyScale * 1.5f, -0.5f, 1f,
-            "mixer", 0, 0), 0);
-    enemiesTurnedOff.put(
-        new Enemy(this, this, this.level, pictures.oven, this.level.energyScale * 1.5f, -3f, 1f,
-            "oven", 0, 0), 0);
+    // List of which Enemies can be turned off
+    List<String> enemyNames = List.of("bulb", "mixer", "oven");
+    for (String name : enemyNames) {
+      // Add every enemy to the enemiesTurnedOff Map
+      enemiesTurnedOff.put(
+        new Enemy(this, this, this.level, pictures.oven, this.level.energyScale * 1.5f,
+          AppConfig.getValue("dmg." + name, -3.0f), AppConfig.getValue("speed." + name, 1.0f), name, 0, 0), 0);
+    }
 
     pictures.tutorial1.resize(displayWidth, displayHeight);
     pictures.tutorial2.resize(displayWidth, displayHeight);
@@ -282,6 +282,7 @@ public class Platformer extends PApplet {
   private void gameLanguageChanges() {
     textLocale.setLanguage(gameLanguage);
     textEmLocale.setLanguage(gameLanguage);
+    pictures.loadTutorialImages(gameLanguage);
     gameMenu = new GameMenu(this, textLocale, textEmLocale);
   }
 
