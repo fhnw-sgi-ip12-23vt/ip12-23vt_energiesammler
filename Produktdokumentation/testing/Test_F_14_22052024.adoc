@@ -9,6 +9,7 @@
 
 include::TestCases/F_14_SprachauswahlImSpiel.adoc[]
 
-*Status:* Nicht erfolgreich
+*Status:* Erfolgreich
 
 *Bemerkungen:* Das Spiel stürzt auf dem Raspberry Pi ab. Lokal auf dem PC funktioniert die Sprachauswahl jedoch nur bei den Türaufgaben.
+*Behoben am 05.06.2024*

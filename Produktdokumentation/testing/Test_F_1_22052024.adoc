@@ -12,3 +12,4 @@ include::TestCases/F_1_SteuerungDerSpielfigur.adoc[]
 *Status:* Erfolgreich mit Verbesserungsvorschlag
 
 *Bemerkungen:* Zu Nahe am Rand (links und rechts) bleibt die Spielfigur stecken und man muss neustarten.
+*Verbessert am 12.06.2024*

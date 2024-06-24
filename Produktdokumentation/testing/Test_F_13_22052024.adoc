@@ -12,3 +12,4 @@ include::TestCases/F_13_TutorialDurchführung.adoc[]
 *Status:* Erfolgreich
 
 *Bemerkungen:* Es fehlen noch Spiel Anweisungen, im Moment sind nur Anweisungen um weiter oder zurück zu gehen.
+*Verbessert am 12.06.2024*

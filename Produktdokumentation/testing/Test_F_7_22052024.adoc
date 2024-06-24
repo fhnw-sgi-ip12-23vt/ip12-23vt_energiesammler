@@ -12,3 +12,4 @@ include::TestCases/F_7_SpielPausieren.adoc[]
 *Status:* Erfolgreich
 
 *Bemerkungen:* Vom Pausieren bis zu der Anzeige des Pausenmenüs dauert es länger als erwartet (ca. 3-5 Sekunden)
+*Verbessert am 12.06.2024*
